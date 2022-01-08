@@ -1,6 +1,8 @@
 
 {
   "common": {
-    "hello": "Hello"
+    "hello": "Hello",
+    "whenWhere": "When & Where",
+    "gifts": "Gifts"
   }
 }

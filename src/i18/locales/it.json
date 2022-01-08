@@ -1,6 +1,8 @@
 
 {
   "common": {
-    "hello": "Ciao"
+    "hello": "Ciao",
+    "whenWhere": "Dove & Quando",
+    "gifts": "Lista"
   }
 }
