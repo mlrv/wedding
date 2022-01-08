@@ -1,7 +1,7 @@
 import 'flagpack/dist/flagpack.css'
-import { resources } from './i18n'
+import { Locale } from './i18n'
 
-const Icon = (locale: keyof typeof resources) => (
+const Icon = (locale: Locale) => (
   <span className={`fp ${locale}`}></span>
 )
 

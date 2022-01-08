@@ -3,6 +3,8 @@ import { initReactI18next } from 'react-i18next'
 import gb from './locales/gb.json'
 import it from './locales/it.json'
 
+export type Locale = keyof typeof resources
+
 export const resources = {
   gb,
   it,
