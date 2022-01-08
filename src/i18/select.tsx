@@ -1,4 +1,4 @@
-import { Button, ButtonGroup } from '@geist-ui/react'
+import { Button } from '@geist-ui/react'
 import { Gb, It } from './icons'
 import { useTranslation } from 'react-i18next'
 import { Locale } from './i18n'
@@ -10,13 +10,21 @@ export const SelectI18N = () => {
   const isActive = (l: Locale) => i18n.language === l
 
   return (
-    <ButtonGroup>
-      <Button disabled={isActive('it')} onClick={() => handler('it')}>
+    <>
+      <Button
+        width="50px"
+        disabled={isActive('it')}
+        onClick={() => handler('it')}
+      >
         <It />
       </Button>
-      <Button disabled={isActive('gb')} onClick={() => handler('gb')}>
+      <Button
+        width="50px"
+        disabled={isActive('gb')}
+        onClick={() => handler('gb')}
+      >
         <Gb />
       </Button>
-    </ButtonGroup>
+    </>
   )
 }

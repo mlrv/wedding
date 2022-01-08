@@ -13,7 +13,7 @@ export const DesktopHeader = () => {
       justify="space-evenly"
       width="100%"
     >
-      <Grid.Container gap={1} justify="space-evenly" width="95%">
+      <Grid.Container gap={1} justify="space-evenly" width="90%">
         <Grid xs={3}>
           <Home />
         </Grid>
@@ -29,7 +29,7 @@ export const DesktopHeader = () => {
       </Grid.Container>
 
       <Grid.Container gap={1} justify="space-evenly" width="5%">
-        <Grid width="100%">
+        <Grid style={{display: 'flex'}}>
           <SelectI18N />
         </Grid>
       </Grid.Container>
