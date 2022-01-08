@@ -4,16 +4,20 @@ import { Drawer } from '@geist-ui/react'
 import { useState } from 'react'
 import { MobileHeaderDrawerContent } from './MobileHeaderDrawerContent'
 
-
 export const MobileHeader = () => {
   const [state, setState] = useState(false)
 
   return (
     <>
       <Menu onClick={() => setState(true)} />
-      <Drawer visible={state} onClose={() => setState(false)} placement="left">
+      <Drawer
+        visible={state}
+        onContentClick={() => setState(false)}
+        onClose={() => setState(false)}
+        placement="left"
+      >
         <Drawer.Content>
-					<MobileHeaderDrawerContent/>
+          <MobileHeaderDrawerContent />
         </Drawer.Content>
       </Drawer>
     </>
