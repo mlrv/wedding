@@ -9,7 +9,7 @@ import {
   theme,
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
-import { availableLanguages } from './i18n'
+import { availableLanguages } from './i18/i18n'
 
 export const App = () => {
   const { t, i18n } = useTranslation()
