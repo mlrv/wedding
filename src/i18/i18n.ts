@@ -1,18 +1,16 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
-import en from './locales/en.json'
+import gb from './locales/gb.json'
 import it from './locales/it.json'
 
-const resources = {
-  en,
+export const resources = {
+  gb,
   it,
-}
+} as const
 
-export const availableLanguages = Object.keys(resources)
 
-i18n.use(initReactI18next).use(LanguageDetector).init({
+i18n.use(initReactI18next).init({
   resources,
   defaultNS: 'common',
-  fallbackLng: 'en',
+  fallbackLng: 'it',
 })
