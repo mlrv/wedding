@@ -1,4 +1,5 @@
 import { Grid } from '@geist-ui/react'
+import { SelectI18N } from '../../../i18/select'
 import { Gifts } from '../links/Gifts'
 import { Home } from '../links/Home'
 import { RSVP } from '../links/RSVP'
@@ -18,6 +19,9 @@ export const MobileHeaderDrawerContent = () => {
       </Grid>
       <Grid xs={24}>
         <Gifts />
+      </Grid>
+      <Grid xs={24}>
+        <SelectI18N />
       </Grid>
     </Grid.Container>
   )
