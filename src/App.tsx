@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react'
 import {
   ChakraProvider,
   Box,
@@ -7,20 +7,35 @@ import {
   Code,
   Grid,
   theme,
-} from "@chakra-ui/react"
-import { Logo } from "./Logo"
+} from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
+import { availableLanguages } from './i18n'
 
-export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-        </VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider>
-)
+export const App = () => {
+  const { t, i18n } = useTranslation()
+
+  return (
+    <ChakraProvider theme={theme}>
+      <div className="App">
+        <header className="App-header">
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t('hello')}
+          </a>
+          <select
+            defaultValue={i18n.language}
+            onChange={e => i18n.changeLanguage(e.target.value)}
+          >
+            {availableLanguages.map(language => (
+              <option key={language}>{language}</option>
+            ))}
+          </select>
+        </header>
+      </div>
+    </ChakraProvider>
+  )
+}
