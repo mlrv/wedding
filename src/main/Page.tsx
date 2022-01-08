@@ -44,6 +44,7 @@ export const Page = () => {
           <Route path="/rsvp" element={<RSVP />} />
           <Route path="/whenwhere" element={<WhenWhere />} />
           <Route path="/gifts" element={<Gifts />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </GPage.Content>
     </GPage>
