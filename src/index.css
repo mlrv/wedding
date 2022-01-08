@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 * {
-	font-family: 'Montserrat';
+  font-family: 'Montserrat';
+}
+
+.header-link {
+  color: #000;
 }

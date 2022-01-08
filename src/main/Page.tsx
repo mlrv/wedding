@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
-import { Page as GPage, Divider, Text } from '@geist-ui/react'
-import { useTranslation } from 'react-i18next'
+import { Routes, Route } from 'react-router-dom'
+import { Page as GPage, Divider } from '@geist-ui/react'
 import { SelectI18N } from '../i18/select'
 import { Header } from './header/Header'
-import { Logo } from './Logo'
+import { Home } from './pages/Home'
+import { RSVP } from './pages/RSVP'
+import { WhenWhere } from './pages/WhenWhere'
+import { Gifts } from './pages/Gifts'
 
 export const Page = () => {
-  const { t } = useTranslation()
-
   const [state, setState] = useState({
     mobileView: false,
   })
@@ -37,9 +38,13 @@ export const Page = () => {
       </GPage.Header>
       <Divider />
       <GPage.Content>
-        <Text h1>{t('hello')}</Text>
         <SelectI18N />
-        <Logo />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/rsvp" element={<RSVP />} />
+          <Route path="/whenwhere" element={<WhenWhere />} />
+          <Route path="/gifts" element={<Gifts />} />
+        </Routes>
       </GPage.Content>
     </GPage>
   )
