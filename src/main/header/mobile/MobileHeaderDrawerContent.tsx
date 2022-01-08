@@ -4,7 +4,6 @@ import { Home } from '../links/Home'
 import { RSVP } from '../links/RSVP'
 import { WhenWhere } from '../links/WhenWhere'
 
-// TODO abstract away
 export const MobileHeaderDrawerContent = () => {
   return (
     <Grid.Container gap={3} justify="center" width="100%">

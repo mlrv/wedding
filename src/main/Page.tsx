@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Page as GPage, Divider } from '@geist-ui/react'
-import { SelectI18N } from '../i18/select'
+import { Page as GPage } from '@geist-ui/react'
 import { Header } from './header/Header'
 import { Home } from './pages/Home'
 import { RSVP } from './pages/RSVP'
@@ -36,9 +35,7 @@ export const Page = () => {
       <GPage.Header>
         <Header mobileView={mobileView} />
       </GPage.Header>
-      <Divider />
       <GPage.Content>
-        <SelectI18N />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/rsvp" element={<RSVP />} />

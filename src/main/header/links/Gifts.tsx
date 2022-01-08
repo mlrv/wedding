@@ -10,7 +10,7 @@ export const Gifts = () => {
   // TODO extract styling
   return (
     <Link to="/gifts" className="header-link">
-      <Text font="30px">{t(gifts)}</Text>
+      <Text font="25px">{t(gifts)}</Text>
     </Link>
   )
 }

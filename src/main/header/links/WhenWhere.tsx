@@ -10,7 +10,7 @@ export const WhenWhere = () => {
   // TODO extract styling
   return (
     <Link to="/whenwhere" className="header-link">
-      <Text font="30px">{t(whenWhere)}</Text>
+      <Text font="25px">{t(whenWhere)}</Text>
     </Link>
   )
 }

@@ -7,7 +7,7 @@ const rsvp = 'RSVP'
 export const RSVP = () => {
   return (
     <Link to="/rsvp" className='header-link'>
-      <Text font="30px">{rsvp}</Text>
+      <Text font="25px">{rsvp}</Text>
     </Link>
   )
 }

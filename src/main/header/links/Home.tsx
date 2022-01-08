@@ -7,7 +7,7 @@ const home = 'Home'
 export const Home = () => {
   return (
     <Link to="/" className='header-link'>
-      <Text font="30px">{home}</Text>
+      <Text font="25px">{home}</Text>
     </Link>
   )
 }

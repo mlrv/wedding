@@ -1,22 +1,22 @@
-import { Select } from '@geist-ui/react'
+import { Button, ButtonGroup } from '@geist-ui/react'
 import { Gb, It } from './icons'
 import { useTranslation } from 'react-i18next'
+import { Locale } from './i18n'
 
 export const SelectI18N = () => {
   const { i18n } = useTranslation()
 
-  const handler = (e: string | string[]) => {
-    i18n.changeLanguage(Array.isArray(e) ? e[0] : e)
-  }
+  const handler = (l: Locale) => i18n.changeLanguage(l)
+  const isActive = (l: Locale) => i18n.language === l
 
   return (
-    <Select initialValue="it" pure onChange={handler}>
-      <Select.Option value="it">
+    <ButtonGroup>
+      <Button disabled={isActive('it')} onClick={() => handler('it')}>
         <It />
-      </Select.Option>
-      <Select.Option value="gb">
+      </Button>
+      <Button disabled={isActive('gb')} onClick={() => handler('gb')}>
         <Gb />
-      </Select.Option>
-    </Select>
+      </Button>
+    </ButtonGroup>
   )
 }
