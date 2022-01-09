@@ -18,7 +18,7 @@ export const Page = () => {
 
   useEffect(() => {
     const setResponsiveness = () => {
-      return window.innerWidth < 900
+      return window.innerWidth < 1000
         ? setState(prevState => ({ ...prevState, mobileView: true }))
         : setState(prevState => ({ ...prevState, mobileView: false }))
     }
@@ -35,11 +35,14 @@ export const Page = () => {
   return (
     <GPage>
       <Header mobileView={mobileView} />
-      <GPage.Content>
+      <GPage.Content style={{ paddingTop: 0 }}>
         <Routes>
           <Route path="/" element={<Home mobileView={mobileView} />} />
           <Route path="/rsvp" element={<RSVP />} />
-          <Route path="/information" element={<Information />} />
+          <Route
+            path="/information"
+            element={<Information mobileView={mobileView} />}
+          />
           <Route path="/gifts" element={<Gifts />} />
           <Route path="/photos" element={<Photos />} />
           <Route path="/thankyou" element={<ThankYou />} />

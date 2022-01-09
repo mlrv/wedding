@@ -9,3 +9,11 @@
   src: local('Quicksand'),
     url(../../fonts/Quicksand.ttf) format('truetype');
 }
+
+.font-cursive {
+  font-family: 'PhotographSignature';
+}
+
+.font-standard {
+  font-family: 'Quicksand';
+}

@@ -23,10 +23,10 @@ export const Home = (props: { mobileView: boolean }) => {
           flexDirection: 'column',
         }}
       >
-        <Text className="olivia-and-marco no-vertical-margin" font="55px">
+        <Text className="font-cursive no-vertical-margin" font="55px">
           Olivia & Marco
         </Text>
-        <Text className="olivia-and-marco no-vertical-margin" font="30px">
+        <Text className="font-cursive no-vertical-margin" font="30px">
           {t('eleventhJune')}
         </Text>
       </Grid>
