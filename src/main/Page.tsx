@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Divider, Page as GPage, Spacer } from '@geist-ui/react'
-import { Header } from './header/Header'
+import { SubHeader } from './header/sub/SubHeader'
 import { Home } from './pages/Home'
 import { RSVP } from './pages/RSVP'
 import { WhenWhere } from './pages/WhenWhere'
 import { Gifts } from './pages/Gifts'
+import { Header } from './header/Header'
 
 export const Page = () => {
   const [state, setState] = useState({
@@ -32,11 +33,22 @@ export const Page = () => {
 
   return (
     <GPage>
-      <Spacer h={2} />
-      <GPage.Header className='header' >
-        <Header mobileView={mobileView} />
+      <Spacer h={1} />
+      <GPage.Header className="header">
+        <Header />
       </GPage.Header>
-      <Spacer h={2} />
+      <Divider
+        style={{
+          visibility: mobileView ? 'hidden' : 'visible',
+          width: '50%',
+          margin: '0 auto',
+        }}
+      />
+      <Spacer h={1} />
+      <GPage.Header className="header">
+        <SubHeader mobileView={mobileView} />
+      </GPage.Header>
+      <Spacer h={1} />
       <Divider />
       <GPage.Content>
         <Routes>

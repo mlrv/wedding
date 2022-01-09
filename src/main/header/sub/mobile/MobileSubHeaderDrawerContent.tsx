@@ -1,11 +1,11 @@
 import { Grid } from '@geist-ui/react'
-import { SelectI18N } from '../../../i18/select'
-import { Gifts } from '../links/Gifts'
-import { Home } from '../links/Home'
-import { RSVP } from '../links/RSVP'
-import { WhenWhere } from '../links/WhenWhere'
+import { SelectI18N } from '../../../../i18/select'
+import { Gifts } from '../../links/Gifts'
+import { Home } from '../../links/Home'
+import { RSVP } from '../../links/RSVP'
+import { WhenWhere } from '../../links/WhenWhere'
 
-export const MobileHeaderDrawerContent = () => {
+export const MobileSubHeaderDrawerContent = () => {
   return (
     <Grid.Container gap={3} justify="center" width="100%">
       <Grid xs={24}>

@@ -2,7 +2,7 @@ import Menu from '@geist-ui/react-icons/menu'
 
 import { Drawer } from '@geist-ui/react'
 import { useState } from 'react'
-import { MobileHeaderDrawerContent } from './MobileHeaderDrawerContent'
+import { MobileSubHeaderDrawerContent } from './MobileSubHeaderDrawerContent'
 
 export const MobileHeader = () => {
   const [state, setState] = useState(false)
@@ -17,7 +17,7 @@ export const MobileHeader = () => {
         placement="left"
       >
         <Drawer.Content>
-          <MobileHeaderDrawerContent />
+          <MobileSubHeaderDrawerContent />
         </Drawer.Content>
       </Drawer>
     </>

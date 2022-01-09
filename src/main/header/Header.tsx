@@ -1,6 +1,5 @@
-import { DesktopHeader } from './desktop/DesktopHeader'
-import { MobileHeader } from './mobile/MobileHeader'
+import { MainHeader } from './main/MainHeader'
 
-export const Header = (props: { mobileView: boolean }) => {
-  return props.mobileView ? <MobileHeader /> : <DesktopHeader />
+export const Header = () => {
+  return <MainHeader />
 }
