@@ -6,12 +6,14 @@ import { MobileHeader } from './mobile/MobileHeader'
 export const Header = (props: { mobileView: boolean }) => {
   return props.mobileView ? (
     <>
+      <Spacer h={1.5} />
       <Page.Header className="header">
         <MobileHeader />
       </Page.Header>
     </>
   ) : (
     <>
+      <Spacer h={1} />
       <Page.Header className="header">
         <DesktopMainHeader />
       </Page.Header>
