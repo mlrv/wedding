@@ -15,7 +15,12 @@ export const DesktopHeader = () => {
       justify="space-evenly"
       width="100%"
     >
-      <Grid.Container gap={1} justify="space-evenly" width="90%">
+      <Grid.Container
+        className="header-desktop"
+        gap={1}
+        justify="space-evenly"
+        width="90%"
+      >
         <Grid xs={3}>
           <Home />
         </Grid>

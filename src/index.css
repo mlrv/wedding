@@ -7,6 +7,11 @@
   margin-bottom: 0;
 }
 
+.header-desktop * {
+  display: 'flex';
+  justify-content: center;
+}
+
 .header-link {
   color: #000;
 }
