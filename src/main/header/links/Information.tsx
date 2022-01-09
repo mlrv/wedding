@@ -7,10 +7,9 @@ const information = 'information'
 export const Information = () => {
   const { t } = useTranslation()
 
-  // TODO extract styling
   return (
     <Link to="/information" className="header-link">
-      <Text font="25px">{t(information)}</Text>
+      <Text font="25px">{t(information).toUpperCase()}</Text>
     </Link>
   )
 }

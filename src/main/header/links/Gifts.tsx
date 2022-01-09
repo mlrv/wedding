@@ -7,10 +7,9 @@ const gifts = 'gifts'
 export const Gifts = () => {
   const { t } = useTranslation()
 
-  // TODO extract styling
   return (
     <Link to="/gifts" className="header-link">
-      <Text font="25px">{t(gifts)}</Text>
+      <Text font="25px">{t(gifts).toUpperCase()}</Text>
     </Link>
   )
 }
