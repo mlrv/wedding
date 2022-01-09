@@ -4,6 +4,8 @@ import { Gifts } from '../links/Gifts'
 import { Home } from '../links/Home'
 import { RSVP } from '../links/RSVP'
 import { Information } from '../links/Information'
+import { Photos } from '../links/Photos'
+import { ThankYou } from '../links/ThankYou'
 
 export const MobileDrawerContent = () => {
   return (
@@ -22,6 +24,12 @@ export const MobileDrawerContent = () => {
       </Grid>
       <Grid xs={24}>
         <Gifts />
+      </Grid>
+      <Grid xs={24}>
+        <Photos />
+      </Grid>
+      <Grid xs={24}>
+        <ThankYou />
       </Grid>
     </Grid.Container>
   )

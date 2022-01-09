@@ -4,6 +4,8 @@ import { Gifts } from '../links/Gifts'
 import { Home } from '../links/Home'
 import { RSVP } from '../links/RSVP'
 import { Information } from '../links/Information'
+import { Photos } from '../links/Photos'
+import { ThankYou } from '../links/ThankYou'
 
 export const DesktopHeader = () => {
   return (
@@ -26,10 +28,16 @@ export const DesktopHeader = () => {
         <Grid xs={3}>
           <Gifts />
         </Grid>
+        <Grid xs={3}>
+          <Photos />
+        </Grid>
+        <Grid xs={3}>
+          <ThankYou />
+        </Grid>
       </Grid.Container>
 
       <Grid.Container gap={1} justify="space-evenly" width="5%">
-        <Grid style={{display: 'flex'}}>
+        <Grid style={{ display: 'flex' }}>
           <SelectI18N />
         </Grid>
       </Grid.Container>

@@ -6,6 +6,8 @@ import { RSVP } from './pages/RSVP'
 import { Information } from './pages/Information'
 import { Gifts } from './pages/Gifts'
 import { Header } from './header/Header'
+import { Photos } from './pages/Photos'
+import { ThankYou } from './pages/ThankYou'
 
 export const Page = () => {
   const [state, setState] = useState({
@@ -39,6 +41,8 @@ export const Page = () => {
           <Route path="/rsvp" element={<RSVP />} />
           <Route path="/information" element={<Information />} />
           <Route path="/gifts" element={<Gifts />} />
+          <Route path="/photos" element={<Photos />} />
+          <Route path="/thankyou" element={<ThankYou />} />
           <Route path="*" element={<Home mobileView={mobileView} />} />
         </Routes>
       </GPage.Content>
