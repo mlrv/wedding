@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'PhotographSignature';
+  src: local('PhotographSignature'),
+    url(../fonts/PhotographSignature.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: local('Quicksand'),
+    url(../fonts/Quicksand.ttf) format('truetype');
+}

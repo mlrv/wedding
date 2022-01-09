@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'PhotographSignature';
-  src: local('PhotographSignature'),
-    url(../fonts/PhotographSignature.ttf) format('truetype');
-}
-
 .olivia-and-marco {
   font-family: 'PhotographSignature';
 }
@@ -15,6 +9,10 @@
 
 .header-link {
   color: #000;
+}
+
+.header-link p {
+  font-family: 'Quicksand';
 }
 
 #root * {
