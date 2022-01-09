@@ -11,7 +11,7 @@ export const MobileHeader = () => {
     <Grid.Container
       style={{ alignItems: 'center' }}
       gap={1}
-      justify="space-evenly"
+      justify="space-between"
       width="100%"
     >
       <Grid.Container
@@ -39,7 +39,9 @@ export const MobileHeader = () => {
         width="90%"
       >
         <Grid>
-          <Text font="30px">Olivia & Marco</Text>
+          <Text className="olivia-and-marco" font="40px">
+            Olivia & Marco
+          </Text>
         </Grid>
       </Grid.Container>
     </Grid.Container>

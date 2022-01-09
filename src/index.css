@@ -1,10 +1,16 @@
 @font-face {
   font-family: 'PhotographSignature';
-  src: local('PhotographSignature'), url(../fonts/PhotographSignature.ttf) format('truetype');
+  src: local('PhotographSignature'),
+    url(../fonts/PhotographSignature.ttf) format('truetype');
 }
 
 .olivia-and-marco {
   font-family: 'PhotographSignature';
+}
+
+.no-vertical-margin {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .header-link {
@@ -16,3 +22,10 @@
   padding-right: 0;
 }
 
+.with-background {
+  background-image: url('./resources/sardinia.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

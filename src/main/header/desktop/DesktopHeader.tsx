@@ -3,9 +3,9 @@ import { SelectI18N } from '../../../i18/select'
 import { Gifts } from '../links/Gifts'
 import { Home } from '../links/Home'
 import { RSVP } from '../links/RSVP'
-import { WhenWhere } from '../links/WhenWhere'
+import { Information } from '../links/Information'
 
-export const DesktopSubHeader = () => {
+export const DesktopHeader = () => {
   return (
     <Grid.Container
       style={{ alignItems: 'center' }}
@@ -18,10 +18,10 @@ export const DesktopSubHeader = () => {
           <Home />
         </Grid>
         <Grid xs={3}>
-          <RSVP />
+          <Information />
         </Grid>
         <Grid xs={3}>
-          <WhenWhere />
+          <RSVP />
         </Grid>
         <Grid xs={3}>
           <Gifts />

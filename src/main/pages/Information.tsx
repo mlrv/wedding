@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-export const Gifts = () => {
+export const Information = () => {
 
   useEffect(
     () => document.body.classList.remove('with-background')
@@ -8,7 +8,7 @@ export const Gifts = () => {
 
   return (
     <>
-      Gifts
+      Information
     </>
   )
 }

@@ -2,7 +2,8 @@
 {
   "common": {
     "hello": "Hello",
-    "whenWhere": "When & Where",
-    "gifts": "Gifts"
+    "information": "Information",
+    "gifts": "Gifts",
+    "eleventhJune": "11 June 2022"
   }
 }

@@ -1,12 +1,10 @@
 import { Divider, Spacer, Page } from '@geist-ui/react'
-import { DesktopMainHeader } from './desktop/DesktopMainHeader'
-import { DesktopSubHeader } from './desktop/DesktopSubHeader'
+import { DesktopHeader } from './desktop/DesktopHeader'
 import { MobileHeader } from './mobile/MobileHeader'
 
 export const Header = (props: { mobileView: boolean }) => {
   return props.mobileView ? (
     <>
-      <Spacer h={1.5} />
       <Page.Header className="header">
         <MobileHeader />
       </Page.Header>
@@ -15,7 +13,7 @@ export const Header = (props: { mobileView: boolean }) => {
     <>
       <Spacer h={1} />
       <Page.Header className="header">
-        <DesktopMainHeader />
+        <DesktopHeader />
       </Page.Header>
       <Divider
         style={{
@@ -23,10 +21,6 @@ export const Header = (props: { mobileView: boolean }) => {
           margin: '0 auto',
         }}
       />
-      <Spacer h={1} />
-      <Page.Header className="header">
-        <DesktopSubHeader />
-      </Page.Header>
     </>
   )
 }
