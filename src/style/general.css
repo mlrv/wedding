@@ -1,0 +1,34 @@
+.olivia-and-marco {
+  font-family: 'PhotographSignature';
+}
+
+.no-vertical-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header-desktop * {
+  display: 'flex';
+  justify-content: center;
+}
+
+.header-link {
+  color: #000;
+}
+
+.header-link p {
+  font-family: 'Quicksand';
+}
+
+#root * {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.with-background {
+  background-image: url('../resources/sardinia.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
