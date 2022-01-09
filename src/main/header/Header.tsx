@@ -15,12 +15,7 @@ export const Header = (props: { mobileView: boolean }) => {
       <Page.Header className="header">
         <DesktopHeader />
       </Page.Header>
-      <Divider
-        style={{
-          width: '50%',
-          margin: '0 auto',
-        }}
-      />
+      <Divider />
     </>
   )
 }
