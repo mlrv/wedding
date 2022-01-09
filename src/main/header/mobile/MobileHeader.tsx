@@ -11,13 +11,13 @@ export const MobileHeader = () => {
     <Grid.Container
       style={{ alignItems: 'center' }}
       gap={1}
-      justify="space-between"
+      justify="space-evenly"
       width="100%"
     >
       <Grid.Container
         style={{ alignItems: 'center' }}
         gap={1}
-        justify="space-evenly"
+        justify="flex-start"
         width="10%"
       >
         <Menu onClick={() => setState(true)} />
@@ -35,8 +35,8 @@ export const MobileHeader = () => {
       <Grid.Container
         style={{ alignItems: 'center' }}
         gap={1}
-        justify="space-evenly"
-        width="90%"
+        justify="flex-end"
+        width="95%"
       >
         <Grid>
           <Text className="olivia-and-marco" font="40px">
