@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@font-face {
+  font-family: 'PhotographSignature';
+  src: local('PhotographSignature'), url(../fonts/PhotographSignature.ttf) format('truetype');
+}
 
-* {
-  font-family: 'Montserrat';
+.olivia-and-marco {
+  font-family: 'PhotographSignature';
 }
 
 .header-link {
