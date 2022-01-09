@@ -1,6 +1,6 @@
 import { Grid, Text } from '@geist-ui/react'
 
-export const MainHeader = () => {
+export const DesktopMainHeader = () => {
   return (
     <Grid.Container
       style={{ alignItems: 'center' }}

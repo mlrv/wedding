@@ -1,9 +1,9 @@
 import { Grid } from '@geist-ui/react'
-import { SelectI18N } from '../../../../i18/select'
-import { Gifts } from '../../links/Gifts'
-import { Home } from '../../links/Home'
-import { RSVP } from '../../links/RSVP'
-import { WhenWhere } from '../../links/WhenWhere'
+import { SelectI18N } from '../../../i18/select'
+import { Gifts } from '../links/Gifts'
+import { Home } from '../links/Home'
+import { RSVP } from '../links/RSVP'
+import { WhenWhere } from '../links/WhenWhere'
 
 export const DesktopSubHeader = () => {
   return (

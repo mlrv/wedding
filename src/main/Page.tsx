@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Divider, Page as GPage, Spacer } from '@geist-ui/react'
-import { SubHeader } from './header/sub/SubHeader'
 import { Home } from './pages/Home'
 import { RSVP } from './pages/RSVP'
 import { WhenWhere } from './pages/WhenWhere'
@@ -34,8 +33,9 @@ export const Page = () => {
   return (
     <GPage>
       <Spacer h={1} />
-      <GPage.Header className="header">
-        <Header />
+      <Header mobileView={mobileView} />
+      {/* <GPage.Header className="header">
+        <MainHeader mobileView={mobileView} />
       </GPage.Header>
       <Divider
         style={{
@@ -47,7 +47,7 @@ export const Page = () => {
       <Spacer h={1} />
       <GPage.Header className="header">
         <SubHeader mobileView={mobileView} />
-      </GPage.Header>
+      </GPage.Header> */}
       <Spacer h={1} />
       <Divider />
       <GPage.Content>
