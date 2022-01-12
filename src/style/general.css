@@ -21,8 +21,22 @@
   padding-right: 0;
 }
 
-.with-background {
+.avif > .with-background,
+.avif.no-webp > .with-background,
+.avif.webp > .with-background {
+  background-image: url('../resources/sardinia.avif');
+}
+
+.webp > .with-background,
+.no-avif.webp > .with-background {
+  background-image: url('../resources/sardinia.webp');
+}
+
+.no-avif.no-webp > .with-background {
   background-image: url('../resources/sardinia.jpeg');
+}
+
+.with-background {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
