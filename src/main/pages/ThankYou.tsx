@@ -21,7 +21,7 @@ export const ThankYou = () => {
         </Text>
       </Grid>
 
-      <Grid xs={18} lg={12}>
+      <Grid xs={18} lg={8}>
         <Text
           className="font-standard newline"
           font="20px"
@@ -30,6 +30,7 @@ export const ThankYou = () => {
           {t('thank_you_content')}
         </Text>
       </Grid>
+      <Spacer h={1}/>
       <Grid>
         <Grid.Container justify="center" style={{ alignItems: 'center' }}>
           <Display />
