@@ -8795,6 +8795,11 @@ webidl-conversions@^6.1.0:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-6.1.0.tgz#9111b4d7ea80acd40f5270d666621afa78b69514"
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
 
+webp-avif-browsers-support-detection@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/webp-avif-browsers-support-detection/-/webp-avif-browsers-support-detection-1.2.3.tgz#4ca358f6105d8ad406ed86206759fcfb33d20e98"
+  integrity sha512-e/AGtDHDmNQBAhXHIljgjeD330p2iPiogCye/5PyOSIv5N+4ihKV4aya8r8DsXnhh5ArUZ/4OKW/o/cLwYOxuQ==
+
 webpack-dev-middleware@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/webpack-dev-middleware/-/webpack-dev-middleware-5.3.0.tgz#8fc02dba6e72e1d373eca361623d84610f27be7c"
