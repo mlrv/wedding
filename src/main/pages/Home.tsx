@@ -27,7 +27,7 @@ export const Home = (props: { mobileView: boolean }) => {
           Olivia & Marco
         </Text>
         <Text className="font-cursive no-vertical-margin" font="30px">
-          {t('eleventhJune')}
+          {t('eleventh_june')}
         </Text>
       </Grid>
     </Grid.Container>
