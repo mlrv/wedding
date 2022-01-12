@@ -28,3 +28,7 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+.newline {
+  white-space: pre-line;
+}

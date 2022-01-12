@@ -1,4 +1,3 @@
-
 {
   "common": {
     "hello": "Hello",
@@ -6,7 +5,7 @@
     "gifts": "Gifts",
     "photos": "Photos",
     "thank_you": "Thank You",
-    "thank_you_content": "Thank You",
+    "thank_you_content": "We want to sincerely thank our friend Nora Gallia for her magnificent illustration and all her precious help in preparing the wedding. \n \n If you need an illustration, check out Nora's work!",
     "eleventh_june": "11 June 2022"
   }
 }
