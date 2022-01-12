@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Grid, Text } from '@geist-ui/react'
+import { Grid, Spacer, Text } from '@geist-ui/react'
 import { useTranslation } from 'react-i18next'
 
 export const Home = (props: { mobileView: boolean }) => {
@@ -23,6 +23,7 @@ export const Home = (props: { mobileView: boolean }) => {
           flexDirection: 'column',
         }}
       >
+        <Spacer h={1} />
         <Text className="font-cursive no-vertical-margin" font="55px">
           Olivia & Marco
         </Text>
