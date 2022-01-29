@@ -8,6 +8,7 @@ import { Gifts } from './pages/Gifts'
 import { Header } from './header/Header'
 import { Photos } from './pages/Photos'
 import { ThankYou } from './pages/ThankYou'
+import { Book } from './pages/Book'
 
 export const Page = () => {
   const [state, setState] = useState({
@@ -39,6 +40,7 @@ export const Page = () => {
         <Routes>
           <Route path="/" element={<Home mobileView={mobileView} />} />
           <Route path="/rsvp" element={<RSVP />} />
+          <Route path="/rsvp/:code" element={<Book />} />
           <Route
             path="/information"
             element={<Information mobileView={mobileView} />}
