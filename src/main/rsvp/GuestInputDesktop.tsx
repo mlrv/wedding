@@ -25,7 +25,7 @@ export const GuestInputDesktop = (props: { guest: Guest }) => {
           flexDirection: 'column',
         }}
       >
-        <Text>{props.guest.name}</Text>
+        <Text className="font-standard">{props.guest.name}</Text>
         <Grid
           xs={24}
           style={{
@@ -34,18 +34,50 @@ export const GuestInputDesktop = (props: { guest: Guest }) => {
             flexDirection: 'row',
           }}
         >
-        <Select width={20}>
-          <Select.Option value="1">Option 1</Select.Option>
-          <Select.Option value="2">Option 2</Select.Option>
-        </Select>
-        <Spacer h={2} />
-        <Select width={20}>
-          <Select.Option value="1">Option 1</Select.Option>
-          <Select.Option value="2">Option 2</Select.Option>
-        </Select>
+          <Select
+            scale={1.5}
+            style={{ paddingLeft: 10 }}
+            placeholder="RSVP"
+            width={20}
+          >
+            <Select.Option value="1">
+              <Text font="16px" className="text-standard">
+                Option 1
+              </Text>
+            </Select.Option>
+            <Select.Option value="2">
+              <Text font="16px" className="text-standard">
+                Option 2
+              </Text>
+            </Select.Option>
+          </Select>
+          <Spacer h={2} />
+          <Select
+            scale={1.5}
+            style={{ paddingLeft: 10 }}
+            placeholder="Food choice"
+            width={20}
+          >
+            <Select.Option value="1">
+              <Text font="16px" className="text-standard">
+                Option 1
+              </Text>
+            </Select.Option>
+            <Select.Option value="2">
+              <Text font="16px" className="text-standard">
+                Option 2
+              </Text>
+            </Select.Option>
+          </Select>
         </Grid>
         <Spacer h={2} />
-        <Input width="100%" value={state} onChange={inputHandler} />
+        <Input
+          scale={1.5}
+          placeholder="Dietary requirements / comments"
+          width="100%"
+          value={state}
+          onChange={inputHandler}
+        />
       </Grid>
     </Grid.Container>
   )

@@ -26,17 +26,49 @@ export const GuestInputMobile = (props: { guest: Guest }) => {
         }}
       >
         <Text>{props.guest.name}</Text>
-        <Select width="100%">
-          <Select.Option value="1">Option 1</Select.Option>
-          <Select.Option value="2">Option 2</Select.Option>
+        <Select
+          scale={1.5}
+          style={{ paddingLeft: 10 }}
+          placeholder="RSVP"
+          width="100%"
+        >
+          <Select.Option value="1">
+            <Text font="16px" className="text-standard">
+              Option 1
+            </Text>
+          </Select.Option>
+          <Select.Option value="2">
+            <Text font="16px" className="text-standard">
+              Option 2
+            </Text>
+          </Select.Option>
         </Select>
         <Spacer h={1} />
-        <Select width="100%">
-          <Select.Option value="1">Option 1</Select.Option>
-          <Select.Option value="2">Option 2</Select.Option>
+        <Select
+          scale={1.5}
+          style={{ paddingLeft: 10 }}
+          placeholder="Food choice"
+          width="100%"
+        >
+          <Select.Option value="1">
+            <Text font="16px" className="text-standard">
+              Option 1
+            </Text>
+          </Select.Option>
+          <Select.Option value="2">
+            <Text font="16px" className="text-standard">
+              Option 2
+            </Text>
+          </Select.Option>
         </Select>
         <Spacer h={1} />
-        <Input width="100%" value={state} onChange={inputHandler} />
+        <Input
+          scale={1.5}
+          placeholder="Dietary requirements / comments"
+          width="100%"
+          value={state}
+          onChange={inputHandler}
+        />
       </Grid>
     </Grid.Container>
   )

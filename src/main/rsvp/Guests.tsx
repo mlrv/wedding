@@ -20,7 +20,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
     >
       <Spacer h={2} />
       <Grid xs={24}>
-        <Input value={state} onChange={inputHandler} />
+        <Input scale={1.5} value={state} onChange={inputHandler} />
       </Grid>
       <Spacer h={1} />
       {props.party.guests.map(g => (
