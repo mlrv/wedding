@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Grid, Input as GInput } from '@geist-ui/react'
+import { Grid, Input as GInput, Spacer } from '@geist-ui/react'
 import { Party } from '../http/models'
 import { GuestInput } from './GuestInput'
 
-export const Guests = (props: { party: Party }) => {
+export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const Input = GInput as any // ???
 
   const [state, setState] = useState(props.party.email)
@@ -18,13 +18,18 @@ export const Guests = (props: { party: Party }) => {
       justify="space-evenly"
       width="100%"
     >
+      <Spacer h={2} />
       <Grid xs={24}>
         <Input value={state} onChange={inputHandler} />
       </Grid>
+      <Spacer h={1} />
       {props.party.guests.map(g => (
-        <Grid xs={24}>
-          <GuestInput guest={g} />
-        </Grid>
+        <>
+          <Grid xs={24}>
+            <GuestInput mobileView={props.mobileView} guest={g} />
+          </Grid>
+          <Spacer h={2} />
+        </>
       ))}
     </Grid.Container>
   )

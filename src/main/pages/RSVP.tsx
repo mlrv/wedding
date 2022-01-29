@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Input as GInput, Button, Grid, Spacer } from '@geist-ui/react'
 import { findPartyByCode } from '../http/api'
 
-export const RSVP = () => {
+export const RSVP = (props: { mobileView: boolean }) => {
   useEffect(() => document.body.classList.remove('with-background'))
 
   const navigate = useNavigate()
@@ -18,7 +18,10 @@ export const RSVP = () => {
   const onSubmit = () =>
     findPartyByCode(state.toLowerCase()).then(p => {
       navigate(`./${state.toLowerCase()}`, {
-        state: { type: 'asked', value: p },
+        state: {
+          rsvp: { type: 'asked', value: p },
+          mobileView: props.mobileView,
+        },
       })
     })
 

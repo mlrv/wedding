@@ -39,7 +39,7 @@ export const Page = () => {
       <GPage.Content style={{ paddingTop: 0 }}>
         <Routes>
           <Route path="/" element={<Home mobileView={mobileView} />} />
-          <Route path="/rsvp" element={<RSVP />} />
+          <Route path="/rsvp" element={<RSVP mobileView={mobileView} />} />
           <Route path="/rsvp/:code" element={<Book />} />
           <Route
             path="/information"
