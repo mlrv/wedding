@@ -28,7 +28,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const { setVisible, bindings } = useModal()
   const { t } = useTranslation()
 
-  const width = '70vw'
+  const width = props.mobileView ? '55vw' : '70vw'
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     setState(prev => ({ ...prev, email: e.target.value }))
@@ -85,6 +85,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
         <Spacer h={2} />
         <Grid xs={24}>
           <Input
+            className="rsvp-input font-standard"
             width={width}
             scale={1.5}
             value={party.email}

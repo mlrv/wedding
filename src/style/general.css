@@ -46,3 +46,7 @@
 .newline {
   white-space: pre-line;
 }
+
+.rsvp-input {
+  background-color: white;
+}

@@ -61,7 +61,9 @@ export const GuestInputDesktop = (props: {
           flexDirection: 'column',
         }}
       >
-        <Text className="font-standard">{props.guest.name}</Text>
+        <Text b font="25px" className="font-standard">
+          {props.guest.name}
+        </Text>
         <Grid
           xs={24}
           style={{
@@ -79,12 +81,12 @@ export const GuestInputDesktop = (props: {
             onChange={onRSVPUpdate}
           >
             <Select.Option value="true">
-              <Text font="16px" className="text-standard">
+              <Text font="16px" className="font-standard">
                 {t('rsvp_coming_true')}
               </Text>
             </Select.Option>
             <Select.Option value="false">
-              <Text font="16px" className="text-standard">
+              <Text font="16px" className="font-standard">
                 {t('rsvp_coming_false')}
               </Text>
             </Select.Option>
@@ -104,22 +106,22 @@ export const GuestInputDesktop = (props: {
             disabled={!isEditable()}
           >
             <Select.Option value="omnivore">
-              <Text font="16px" className="text-standard">
+              <Text font="16px" className="font-standard">
                 {t('rsvp_diet_omnivore')}
               </Text>
             </Select.Option>
             <Select.Option value="vegetarian">
-              <Text font="16px" className="text-standard">
+              <Text font="16px" className="font-standard">
                 {t('rsvp_diet_vegetarian')}
               </Text>
             </Select.Option>
             <Select.Option value="pescatarian">
-              <Text font="16px" className="text-standard">
+              <Text font="16px" className="font-standard">
                 {t('rsvp_diet_pescatarian')}
               </Text>
             </Select.Option>
             <Select.Option value="vegan">
-              <Text font="16px" className="text-standard">
+              <Text font="16px" className="font-standard">
                 {t('rsvp_diet_vegan')}
               </Text>
             </Select.Option>
@@ -127,6 +129,7 @@ export const GuestInputDesktop = (props: {
         </Grid>
         <Spacer h={2} />
         <Input
+          className="rsvp-input font-standard"
           scale={1.5}
           placeholder={t('rsvp_comments')}
           width="100%"

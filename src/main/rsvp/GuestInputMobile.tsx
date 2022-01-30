@@ -8,12 +8,13 @@ export const GuestInputMobile = (props: {
   guest: Guest
   updateGuest: (guestName: string, update: Partial<Guest>) => void
 }) => {
+
   const Input = GInput as any // ???
 
   const [guest, setGuest] = useState(props.guest)
   const { t } = useTranslation()
 
-  const width = '70vw'
+  const width = '55vw'
 
   const isValidDiet = (d: string): d is Diet =>
     ['omnivore', 'pescatarian', 'vegetarian', 'vegan'].includes(d)
@@ -61,7 +62,10 @@ export const GuestInputMobile = (props: {
           flexDirection: 'column',
         }}
       >
-        <Text>{props.guest.name}</Text>
+        <Text b font="25px" className="font-standard">
+          {props.guest.name}
+        </Text>
+        <Spacer h={1} />
         <Select
           scale={1.5}
           style={{ paddingLeft: 10 }}
@@ -71,12 +75,12 @@ export const GuestInputMobile = (props: {
           onChange={onRSVPUpdate}
         >
           <Select.Option value="true">
-            <Text font="16px" className="text-standard">
+            <Text font="16px" className="font-standard">
               {t('rsvp_coming_true')}
             </Text>
           </Select.Option>
           <Select.Option value="false">
-            <Text font="16px" className="text-standard">
+            <Text font="16px" className="font-standard">
               {t('rsvp_coming_false')}
             </Text>
           </Select.Option>
@@ -96,28 +100,29 @@ export const GuestInputMobile = (props: {
           disabled={!isEditable()}
         >
           <Select.Option value="omnivore">
-            <Text font="16px" className="text-standard">
+            <Text font="16px" className="font-standard">
               {t('rsvp_diet_omnivore')}
             </Text>
           </Select.Option>
           <Select.Option value="vegetarian">
-            <Text font="16px" className="text-standard">
+            <Text font="16px" className="font-standard">
               {t('rsvp_diet_vegetarian')}
             </Text>
           </Select.Option>
           <Select.Option value="pescatarian">
-            <Text font="16px" className="text-standard">
+            <Text font="16px" className="font-standard">
               {t('rsvp_diet_pescatarian')}
             </Text>
           </Select.Option>
           <Select.Option value="vegan">
-            <Text font="16px" className="text-standard">
+            <Text font="16px" className="font-standard">
               {t('rsvp_diet_vegan')}
             </Text>
           </Select.Option>
         </Select>
         <Spacer h={1} />
         <Input
+          className="rsvp-input font-standard"
           scale={1.5}
           placeholder={t('rsvp_comments')}
           width={width}

@@ -63,7 +63,7 @@ export const RSVP = (props: { mobileView: boolean }) => {
         <Grid xs={24}>
           <Text
             font="20px"
-            className="text-standard"
+            className="font-standard"
             style={{ textAlign: 'center' }}
           >
             {t('rsvp_instructions')}
