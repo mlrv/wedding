@@ -2,7 +2,10 @@ import { Text, Select, Grid, Spacer, Input as GInput } from '@geist-ui/react'
 import { useState } from 'react'
 import { Guest } from '../http/models'
 
-export const GuestInputMobile = (props: { guest: Guest }) => {
+export const GuestInputMobile = (props: {
+  guest: Guest
+  updateGuest: (guestName: string, update: Partial<Guest>) => void
+}) => {
   const Input = GInput as any // ???
 
   const [state, setState] = useState('')

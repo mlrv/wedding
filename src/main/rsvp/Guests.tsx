@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Grid, Input as GInput, Spacer } from '@geist-ui/react'
-import { Party } from '../http/models'
+import { Button, Grid, Input as GInput, Spacer } from '@geist-ui/react'
+import { Guest, Party } from '../http/models'
 import { GuestInput } from './GuestInput'
 
 export const Guests = (props: { mobileView: boolean; party: Party }) => {
@@ -10,6 +10,9 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     setState(e.target.value)
+
+  const onUpdateGuest = (guestName: string, update: Partial<Guest>) =>
+    console.log(guestName, update)
 
   return (
     <Grid.Container
@@ -27,15 +30,23 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
           onChange={inputHandler}
         />
       </Grid>
-      <Spacer h={1} />
+      <Spacer h={2} />
       {props.party.guests.map(g => (
         <>
           <Grid xs={24}>
-            <GuestInput mobileView={props.mobileView} guest={g} />
+            <GuestInput
+              mobileView={props.mobileView}
+              guest={g}
+              updateGuest={onUpdateGuest}
+            />
           </Grid>
           <Spacer h={2} />
         </>
       ))}
+      <Spacer h={1} />
+      <Grid xs={24}>
+        <Button>Submit</Button>
+      </Grid>
     </Grid.Container>
   )
 }
