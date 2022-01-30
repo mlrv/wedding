@@ -3,8 +3,10 @@ import { Button, Grid, Input as GInput, Spacer } from '@geist-ui/react'
 import { Guest, Party } from '../http/models'
 import { GuestInput } from './GuestInput'
 import { Option, map, chain } from 'fp-ts/Option'
+import { fold } from 'fp-ts/Either'
 import { findIndex, updateAt } from 'fp-ts/Array'
 import { pipe } from 'fp-ts/function'
+import { ConfirmedGuestList } from '../http/decoders'
 
 export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const Input = GInput as any // ???
@@ -32,6 +34,14 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
         setState(prev => ({ ...prev, guests: updatedGuests })),
       ),
     )
+
+  const isSubmittable = () =>
+    fold(
+      _ => false,
+      _ => true,
+    )(ConfirmedGuestList.decode(party.guests))
+
+  const onSubmit = () => console.log(party)
 
   return (
     <Grid.Container
@@ -64,7 +74,9 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
       ))}
       <Spacer h={1} />
       <Grid xs={24}>
-        <Button>Submit</Button>
+        <Button disabled={!isSubmittable()} onClick={onSubmit}>
+          Submit
+        </Button>
       </Grid>
     </Grid.Container>
   )

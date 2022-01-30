@@ -32,11 +32,12 @@ const ConfirmedGuestNotComing = pipe(
   D.intersect(UnconfirmedGuest),
 )
 
-const ConfirmedGuest = D.union(ConfirmedGuestComing, ConfirmedGuestNotComing)
+export const ConfirmedGuest = D.union(ConfirmedGuestComing, ConfirmedGuestNotComing)
+export const ConfirmedGuestList = D.array(ConfirmedGuest)
 
-const Guest = D.union(ConfirmedGuest, UnconfirmedGuest)
+export const Guest = D.union(ConfirmedGuest, UnconfirmedGuest)
 
-export const TParty = D.struct({
+export const Party = D.struct({
   email: D.string,
   guests: D.array(Guest),
 })
