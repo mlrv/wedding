@@ -43,7 +43,6 @@ export const RSVP = (props: { mobileView: boolean }) => {
         ),
       )
       .catch(_ => navigate('/rsvp/error'))
-      .finally(() => setVisible(false))
   }
 
   return (

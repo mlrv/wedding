@@ -1,21 +1,30 @@
 import { useState } from 'react'
-import { Button, Grid, Input as GInput, Spacer } from '@geist-ui/react'
+import {
+  Button,
+  Grid,
+  Input as GInput,
+  Modal,
+  Spacer,
+  useModal,
+} from '@geist-ui/react'
 import { Guest, Party } from '../http/models'
 import { GuestInput } from './GuestInput'
-import { Option, map, chain } from 'fp-ts/Option'
+import { Option, map, chain, fold as foldO } from 'fp-ts/Option'
 import { fold } from 'fp-ts/Either'
 import { findIndex, updateAt } from 'fp-ts/Array'
 import { pipe } from 'fp-ts/function'
 import { ConfirmedGuestList } from '../http/decoders'
 import { putPartyByCode } from '../http/api'
 import { useNavigate } from 'react-router-dom'
+import { Loader } from '../loader/Loader'
+import { loadParNWithTimeout } from '../loader/utils'
 
 export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const Input = GInput as any // ???
 
   const [party, setState] = useState(props.party)
-
   const navigate = useNavigate()
+  const { setVisible, bindings } = useModal()
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     setState(prev => ({ ...prev, email: e.target.value }))
@@ -45,51 +54,65 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
       _ => true,
     )(ConfirmedGuestList.decode(party.guests))
 
-  const onSubmit = () =>
-    putPartyByCode(party.code, party)
+  const onSubmit = () => {
+    setVisible(true)
+
+    loadParNWithTimeout(() => putPartyByCode(party.code, party), 1500, 5000)
       .then(
-        fold(
-          _ => navigate('/rsvp/error'),
-          _ => navigate('/rsvp/confirmed'),
+        foldO(
+          () => navigate('/rsvp/error'),
+          fold(
+            _ => navigate('/rsvp/error'),
+            _ => navigate('/rsvp/confirmed'),
+          ),
         ),
       )
       .catch(_ => navigate('/rsvp/error'))
+  }
 
   return (
-    <Grid.Container
-      style={{ alignItems: 'center', flexDirection: 'column' }}
-      gap={0}
-      justify="space-evenly"
-      width="100%"
-    >
-      <Spacer h={2} />
-      <Grid xs={24}>
-        <Input
-          width={props.mobileView ? null : 41}
-          scale={1.5}
-          value={party.email}
-          onChange={inputHandler}
-        />
-      </Grid>
-      <Spacer h={2} />
-      {props.party.guests.map(g => (
-        <>
-          <Grid xs={24}>
-            <GuestInput
-              mobileView={props.mobileView}
-              guest={g}
-              updateGuest={onUpdateGuest}
-            />
-          </Grid>
-          <Spacer h={2} />
-        </>
-      ))}
-      <Spacer h={1} />
-      <Grid xs={24}>
-        <Button disabled={!isSubmittable()} onClick={onSubmit}>
-          Submit
-        </Button>
-      </Grid>
-    </Grid.Container>
+    <>
+      <Grid.Container
+        style={{ alignItems: 'center', flexDirection: 'column' }}
+        gap={0}
+        justify="space-evenly"
+        width="100%"
+      >
+        <Spacer h={2} />
+        <Grid xs={24}>
+          <Input
+            width={props.mobileView ? null : 41}
+            scale={1.5}
+            value={party.email}
+            onChange={inputHandler}
+          />
+        </Grid>
+        <Spacer h={2} />
+        {props.party.guests.map(g => (
+          <>
+            <Grid xs={24}>
+              <GuestInput
+                mobileView={props.mobileView}
+                guest={g}
+                updateGuest={onUpdateGuest}
+              />
+            </Grid>
+            <Spacer h={2} />
+          </>
+        ))}
+        <Spacer h={1} />
+        <Grid xs={24}>
+          <Button disabled={!isSubmittable()} onClick={onSubmit}>
+            Submit
+          </Button>
+        </Grid>
+      </Grid.Container>
+
+      <Modal {...bindings} disableBackdropClick={true} keyboard={false}>
+        <Modal.Content>
+          <Loader />
+        </Modal.Content>
+      </Modal>
+    </>
   )
 }
