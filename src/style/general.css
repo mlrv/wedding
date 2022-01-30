@@ -47,6 +47,10 @@
   white-space: pre-line;
 }
 
+.invite {
+  background-image: url('../resources/paper-white.jpg');
+}
+
 .rsvp-input {
   background-color: white;
 }

@@ -77,6 +77,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
   return (
     <>
       <Grid.Container
+        className="invite"
         style={{ alignItems: 'center', flexDirection: 'column' }}
         gap={0}
         justify="space-evenly"
@@ -111,6 +112,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
             {t('rsvp_submit')}
           </Button>
         </Grid>
+        <Spacer h={2} />
       </Grid.Container>
 
       <Modal {...bindings} disableBackdropClick={true} keyboard={false}>
