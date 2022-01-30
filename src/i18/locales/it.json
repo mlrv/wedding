@@ -6,6 +6,14 @@
     "photos": "Foto",
     "thank_you": "Grazie",
     "thank_you_content": "Vogliamo ringraziare di cuore la nostra amica Nora Gallia per la sua magnifica illustrazione e tutto il suo prezioso aiuto nel preparare il matrimonio. \n\n Se avete bisogno di un'illustrazione, date un'occhiata ai lavori di Nora!",
-    "eleventh_june": "11 Giugno 2022"
+    "eleventh_june": "11 Giugno 2022",
+    "rsvp_coming_true": "Ci sarò!",
+    "rsvp_coming_false": "Non ci sarò",
+    "rsvp_diet": "Menù",
+    "rsvp_diet_omnivore": "Mangio tutto",
+    "rsvp_diet_vegetarian": "Sono vegetariana/o",
+    "rsvp_diet_pescatarian": "Non mangio la carne, ma il pesce si",
+    "rsvp_diet_vegan": "Sono vegana/o",
+    "rsvp_comments": "Altri commenti..."
   }
 }

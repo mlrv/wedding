@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Text, Select, Grid, Spacer, Input as GInput } from '@geist-ui/react'
 import { constVoid, pipe } from 'fp-ts/function'
 import { Guest, Diet } from '../http/models'
+import { useTranslation } from 'react-i18next'
 
 export const GuestInputDesktop = (props: {
   guest: Guest
@@ -10,6 +11,7 @@ export const GuestInputDesktop = (props: {
   const Input = GInput as any // ???
 
   const [guest, setGuest] = useState(props.guest)
+  const { t } = useTranslation()
 
   const isValidDiet = (d: string): d is Diet =>
     ['omnivore', 'pescatarian', 'vegetarian', 'vegan'].includes(d)
@@ -76,12 +78,12 @@ export const GuestInputDesktop = (props: {
           >
             <Select.Option value="true">
               <Text font="16px" className="text-standard">
-                Yes, I can make it
+                {t('rsvp_coming_true')}
               </Text>
             </Select.Option>
             <Select.Option value="false">
               <Text font="16px" className="text-standard">
-                No, I can't make it
+                {t('rsvp_coming_false')}
               </Text>
             </Select.Option>
           </Select>
@@ -91,7 +93,7 @@ export const GuestInputDesktop = (props: {
             style={{
               paddingLeft: 10,
             }}
-            placeholder="Food choice"
+            placeholder={t('rsvp_diet')}
             initialValue={
               'diet' in guest && isValidDiet(guest.diet) ? guest.diet : ''
             }
@@ -101,22 +103,22 @@ export const GuestInputDesktop = (props: {
           >
             <Select.Option value="omnivore">
               <Text font="16px" className="text-standard">
-                Omnivore
+                {t('rsvp_diet_omnivore')}
               </Text>
             </Select.Option>
             <Select.Option value="vegetarian">
               <Text font="16px" className="text-standard">
-                Vegetarian
+              {t('rsvp_diet_vegetarian')}
               </Text>
             </Select.Option>
             <Select.Option value="pescatarian">
               <Text font="16px" className="text-standard">
-                Pescatarian
+              {t('rsvp_diet_pescatarian')}
               </Text>
             </Select.Option>
             <Select.Option value="vegan">
               <Text font="16px" className="text-standard">
-                Vegan
+              {t('rsvp_diet_vegan')}
               </Text>
             </Select.Option>
           </Select>
@@ -124,7 +126,7 @@ export const GuestInputDesktop = (props: {
         <Spacer h={2} />
         <Input
           scale={1.5}
-          placeholder="Dietary requirements / comments"
+          placeholder={t('rsvp_comments')}
           width="100%"
           value={'comments' in guest && isEditable() ? guest.comments : ''}
           onChange={onCommentsUpdate}
