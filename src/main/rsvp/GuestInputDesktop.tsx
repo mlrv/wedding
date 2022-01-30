@@ -108,17 +108,17 @@ export const GuestInputDesktop = (props: {
             </Select.Option>
             <Select.Option value="vegetarian">
               <Text font="16px" className="text-standard">
-              {t('rsvp_diet_vegetarian')}
+                {t('rsvp_diet_vegetarian')}
               </Text>
             </Select.Option>
             <Select.Option value="pescatarian">
               <Text font="16px" className="text-standard">
-              {t('rsvp_diet_pescatarian')}
+                {t('rsvp_diet_pescatarian')}
               </Text>
             </Select.Option>
             <Select.Option value="vegan">
               <Text font="16px" className="text-standard">
-              {t('rsvp_diet_vegan')}
+                {t('rsvp_diet_vegan')}
               </Text>
             </Select.Option>
           </Select>
