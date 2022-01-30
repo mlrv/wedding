@@ -2,17 +2,36 @@ import { useState } from 'react'
 import { Button, Grid, Input as GInput, Spacer } from '@geist-ui/react'
 import { Guest, Party } from '../http/models'
 import { GuestInput } from './GuestInput'
+import { Option, map, chain } from 'fp-ts/Option'
+import { findIndex, updateAt } from 'fp-ts/Array'
+import { pipe } from 'fp-ts/function'
 
 export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const Input = GInput as any // ???
 
-  const [state, setState] = useState(props.party.email)
+  const [party, setState] = useState(props.party)
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setState(e.target.value)
+    setState(prev => ({ ...prev, email: e.target.value }))
+
+  const findGuestByName = (
+    guestName: string,
+  ): Option<{ index: number; guest: Guest }> =>
+    pipe(
+      findIndex((g: Guest) => g.name === guestName)(party.guests),
+      map(index => ({ index, guest: party.guests[index] })),
+    )
 
   const onUpdateGuest = (guestName: string, update: Partial<Guest>) =>
-    console.log(guestName, update)
+    pipe(
+      findGuestByName(guestName),
+      chain(({ index, guest }) =>
+        updateAt(index, { ...guest, ...update })(party.guests),
+      ),
+      map(updatedGuests =>
+        setState(prev => ({ ...prev, guests: updatedGuests })),
+      ),
+    )
 
   return (
     <Grid.Container
@@ -26,7 +45,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
         <Input
           width={props.mobileView ? null : 41}
           scale={1.5}
-          value={state}
+          value={party.email}
           onChange={inputHandler}
         />
       </Grid>
