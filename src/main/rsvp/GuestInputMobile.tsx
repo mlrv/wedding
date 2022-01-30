@@ -13,6 +13,8 @@ export const GuestInputMobile = (props: {
   const [guest, setGuest] = useState(props.guest)
   const { t } = useTranslation()
 
+  const width = '70vw'
+
   const isValidDiet = (d: string): d is Diet =>
     ['omnivore', 'pescatarian', 'vegetarian', 'vegan'].includes(d)
 
@@ -46,7 +48,7 @@ export const GuestInputMobile = (props: {
 
   return (
     <Grid.Container
-      style={{ alignItems: 'center', flexDirection: 'column' }}
+      style={{ alignItems: 'center', flexDirection: 'column', flex: 1 }}
       gap={0}
       justify="space-evenly"
       width="100%"
@@ -65,7 +67,7 @@ export const GuestInputMobile = (props: {
           style={{ paddingLeft: 10 }}
           placeholder="RSVP"
           initialValue={'coming' in guest ? JSON.stringify(guest.coming) : ''}
-          width={20}
+          width={width}
           onChange={onRSVPUpdate}
         >
           <Select.Option value="true">
@@ -89,7 +91,7 @@ export const GuestInputMobile = (props: {
           initialValue={
             'diet' in guest && isValidDiet(guest.diet) ? guest.diet : ''
           }
-          width={20}
+          width={width}
           onChange={onFoodChoiceUpdate}
           disabled={!isEditable()}
         >
@@ -118,7 +120,7 @@ export const GuestInputMobile = (props: {
         <Input
           scale={1.5}
           placeholder={t('rsvp_comments')}
-          width={18}
+          width={width}
           value={'comments' in guest && isEditable() ? guest.comments : ''}
           onChange={onCommentsUpdate}
           disabled={!isEditable()}

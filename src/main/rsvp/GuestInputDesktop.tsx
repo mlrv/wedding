@@ -13,6 +13,8 @@ export const GuestInputDesktop = (props: {
   const [guest, setGuest] = useState(props.guest)
   const { t } = useTranslation()
 
+  const width = '35vw'
+
   const isValidDiet = (d: string): d is Diet =>
     ['omnivore', 'pescatarian', 'vegetarian', 'vegan'].includes(d)
 
@@ -73,7 +75,7 @@ export const GuestInputDesktop = (props: {
             style={{ paddingLeft: 10 }}
             placeholder="RSVP"
             initialValue={'coming' in guest ? JSON.stringify(guest.coming) : ''}
-            width={20}
+            width={width}
             onChange={onRSVPUpdate}
           >
             <Select.Option value="true">
@@ -97,7 +99,7 @@ export const GuestInputDesktop = (props: {
             initialValue={
               'diet' in guest && isValidDiet(guest.diet) ? guest.diet : ''
             }
-            width={20}
+            width={width}
             onChange={onFoodChoiceUpdate}
             disabled={!isEditable()}
           >
