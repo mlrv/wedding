@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
+  Text,
   Input as GInput,
   Button,
   Grid,
@@ -12,6 +13,8 @@ import { findPartyByCode } from '../http/api'
 import { loadParNWithTimeout } from '../loader/utils'
 import { Loader } from '../loader/Loader'
 import { fold } from 'fp-ts/Option'
+import { Logo } from '../logo/Logo'
+import { useTranslation } from 'react-i18next'
 
 export const RSVP = (props: { mobileView: boolean }) => {
   useEffect(() => document.body.classList.remove('with-background'))
@@ -19,6 +22,7 @@ export const RSVP = (props: { mobileView: boolean }) => {
   const Input = GInput as any // ???
 
   const navigate = useNavigate()
+  const { t } = useTranslation()
   const { setVisible, bindings } = useModal()
   const [state, setState] = useState('')
 
@@ -53,14 +57,25 @@ export const RSVP = (props: { mobileView: boolean }) => {
         justify="space-evenly"
         width="100%"
       >
-        <Spacer h={1} />
+        <Grid xs={24}>
+          <Logo width={35} />
+        </Grid>
+        <Grid xs={24}>
+          <Text
+            font="20px"
+            className="text-standard"
+            style={{ textAlign: 'center' }}
+          >
+            {t('rsvp_instructions')}
+          </Text>
+        </Grid>
         <Grid xs={24}>
           <Input scale={2.5} value={state} onChange={inputHandler} />
         </Grid>
         <Spacer h={1} />
         <Grid xs={24}>
           <Button disabled={state.length !== 4} onClick={onSubmit}>
-            Submit
+            {t('rsvp_submit')}
           </Button>
         </Grid>
         <Spacer h={1} />

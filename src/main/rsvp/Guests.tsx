@@ -18,6 +18,7 @@ import { putPartyByCode } from '../http/api'
 import { useNavigate } from 'react-router-dom'
 import { Loader } from '../loader/Loader'
 import { loadParNWithTimeout } from '../loader/utils'
+import { useTranslation } from 'react-i18next'
 
 export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const Input = GInput as any // ???
@@ -25,6 +26,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const [party, setState] = useState(props.party)
   const navigate = useNavigate()
   const { setVisible, bindings } = useModal()
+  const { t } = useTranslation()
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     setState(prev => ({ ...prev, email: e.target.value }))
@@ -103,7 +105,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
         <Spacer h={1} />
         <Grid xs={24}>
           <Button disabled={!isSubmittable()} onClick={onSubmit}>
-            Submit
+            {t('rsvp_submit')}
           </Button>
         </Grid>
       </Grid.Container>
