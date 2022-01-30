@@ -7,11 +7,15 @@ import { fold } from 'fp-ts/Either'
 import { findIndex, updateAt } from 'fp-ts/Array'
 import { pipe } from 'fp-ts/function'
 import { ConfirmedGuestList } from '../http/decoders'
+import { putPartyByCode } from '../http/api'
+import { useNavigate } from 'react-router-dom'
 
 export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const Input = GInput as any // ???
 
   const [party, setState] = useState(props.party)
+
+  const navigate = useNavigate()
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     setState(prev => ({ ...prev, email: e.target.value }))
@@ -41,7 +45,15 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
       _ => true,
     )(ConfirmedGuestList.decode(party.guests))
 
-  const onSubmit = () => console.log(party)
+  const onSubmit = () =>
+    putPartyByCode(party.code, party)
+      .then(
+        fold(
+          _ => navigate('/rsvp/error'),
+          _ => navigate('/rsvp/confirmed'),
+        ),
+      )
+      .catch(_ => navigate('/rsvp/error'))
 
   return (
     <Grid.Container

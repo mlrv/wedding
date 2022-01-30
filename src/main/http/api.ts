@@ -1,6 +1,7 @@
-import { pipe } from 'fp-ts/function'
+import { constVoid, pipe } from 'fp-ts/function'
+import { Either, right, map as mapE, fold, left } from 'fp-ts/Either'
 import { fromEither, map, none, Option } from 'fp-ts/Option'
-import { TParty } from './decoders'
+import { Party as TParty, ConfirmedGuestList } from './decoders'
 import { Party } from './models'
 
 const urlBase = 'https://mlrv-wedding-api.herokuapp.com'
@@ -20,4 +21,30 @@ export const findPartyByCode = (c: string): Promise<Option<Party>> => {
     .catch(_ => none)
 }
 
-export const putPartyByCode = 1
+export const putPartyByCode = (
+  c: string,
+  update: Partial<Party>,
+): Promise<Either<string, void>> => {
+  const allGuestsConfirmed =
+    'guests' in update
+      ? pipe(ConfirmedGuestList.decode(update.guests), mapE(constVoid))
+      : right(constVoid())
+
+  const options = {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(update),
+  }
+
+  const makeRequest = (): Promise<Either<string, void>> =>
+    fetch(`${url}/${c}`, options)
+      .then(r =>
+        r.status === 200 ? right(constVoid()) : left('Unexpected error'),
+      )
+      .catch(err => left(String(err)))
+
+  return fold(
+    decodeErr => Promise.resolve(left(String(decodeErr))),
+    makeRequest,
+  )(allGuestsConfirmed)
+}
