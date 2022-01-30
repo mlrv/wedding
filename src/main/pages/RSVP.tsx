@@ -32,7 +32,7 @@ export const RSVP = (props: { mobileView: boolean }) => {
   const onSubmit = () => {
     setVisible(true)
 
-    loadParNWithTimeout(() => findPartyByCode(state.toLowerCase()), 1500, 5000)
+    loadParNWithTimeout(() => findPartyByCode(state.toLowerCase()), 1500, 10000)
       .then(
         fold(
           () => navigate('/rsvp/error'),

@@ -59,7 +59,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const onSubmit = () => {
     setVisible(true)
 
-    loadParNWithTimeout(() => putPartyByCode(party.code, party), 1500, 5000)
+    loadParNWithTimeout(() => putPartyByCode(party.code, party), 1500, 10000)
       .then(
         foldO(
           () => navigate('/rsvp/error'),
