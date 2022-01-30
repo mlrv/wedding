@@ -1,6 +1,7 @@
+import React, { useState } from 'react'
 import { Text, Select, Grid, Spacer, Input as GInput } from '@geist-ui/react'
-import { useState } from 'react'
-import { Guest } from '../http/models'
+import { constVoid, pipe } from 'fp-ts/function'
+import { Guest, Diet } from '../http/models'
 
 export const GuestInputMobile = (props: {
   guest: Guest
@@ -8,10 +9,38 @@ export const GuestInputMobile = (props: {
 }) => {
   const Input = GInput as any // ???
 
-  const [state, setState] = useState('')
+  const [guest, setGuest] = useState(props.guest)
 
-  const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setState(e.target.value)
+  const isValidDiet = (d: string): d is Diet =>
+    ['omnivore', 'pescatarian', 'vegetarian', 'vegan'].includes(d)
+
+  const onUpdate = (update: Partial<Guest>) =>
+    props.updateGuest(props.guest.name, update)
+
+  const onRSVPUpdate = (c: string | string[]) =>
+    pipe(
+      c === 'true',
+      coming => pipe(onUpdate({ coming }), _ => coming),
+      coming => setGuest(prev => ({ ...prev, coming: coming })),
+    )
+
+  const onFoodChoiceUpdate = (c: string | string[]) => {
+    const option = Array.isArray(c) ? c[0] : c
+    return isValidDiet(option) ? onUpdate({ diet: option }) : constVoid()
+  }
+
+  const onCommentsUpdate = (e: React.ChangeEvent<HTMLInputElement>) =>
+    pipe(
+      e.target.value,
+      comments =>
+        pipe(
+          setGuest(prev => ({ ...prev, comments })),
+          _ => comments,
+        ),
+      comments => onUpdate({ comments }),
+    )
+
+  const isEditable = () => ('coming' in guest ? guest.coming : true)
 
   return (
     <Grid.Container
@@ -33,34 +62,53 @@ export const GuestInputMobile = (props: {
           scale={1.5}
           style={{ paddingLeft: 10 }}
           placeholder="RSVP"
-          width="100%"
+          initialValue={'coming' in guest ? JSON.stringify(guest.coming) : ''}
+          width={20}
+          onChange={onRSVPUpdate}
         >
-          <Select.Option value="1">
+          <Select.Option value="true">
             <Text font="16px" className="text-standard">
-              Option 1
+              Yes, I can make it
             </Text>
           </Select.Option>
-          <Select.Option value="2">
+          <Select.Option value="false">
             <Text font="16px" className="text-standard">
-              Option 2
+              No, I can't make it
             </Text>
           </Select.Option>
         </Select>
         <Spacer h={1} />
         <Select
           scale={1.5}
-          style={{ paddingLeft: 10 }}
+          style={{
+            paddingLeft: 10,
+          }}
           placeholder="Food choice"
-          width="100%"
+          initialValue={
+            'diet' in guest && isValidDiet(guest.diet) ? guest.diet : ''
+          }
+          width={20}
+          onChange={onFoodChoiceUpdate}
+          disabled={!isEditable()}
         >
-          <Select.Option value="1">
+          <Select.Option value="omnivore">
             <Text font="16px" className="text-standard">
-              Option 1
+              Omnivore
             </Text>
           </Select.Option>
-          <Select.Option value="2">
+          <Select.Option value="vegetarian">
             <Text font="16px" className="text-standard">
-              Option 2
+              Vegetarian
+            </Text>
+          </Select.Option>
+          <Select.Option value="pescatarian">
+            <Text font="16px" className="text-standard">
+              Pescatarian
+            </Text>
+          </Select.Option>
+          <Select.Option value="vegan">
+            <Text font="16px" className="text-standard">
+              Vegan
             </Text>
           </Select.Option>
         </Select>
@@ -68,9 +116,10 @@ export const GuestInputMobile = (props: {
         <Input
           scale={1.5}
           placeholder="Dietary requirements / comments"
-          width="100%"
-          value={state}
-          onChange={inputHandler}
+          width={18}
+          value={'comments' in guest && isEditable() ? guest.comments : ''}
+          onChange={onCommentsUpdate}
+          disabled={!isEditable()}
         />
       </Grid>
     </Grid.Container>
