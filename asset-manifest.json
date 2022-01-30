@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.66a8e2db.css",
-    "main.js": "/static/js/main.1b51ebd7.js",
+    "main.css": "/static/css/main.159dffd3.css",
+    "main.js": "/static/js/main.0ab765c9.js",
+    "static/media/logo.png": "/static/media/logo.12be48b1d9c7a87d02fd.png",
     "static/media/sardinia.webp": "/static/media/sardinia.cf6833e36ad40e8631c8.webp",
     "static/media/sardinia.jpeg": "/static/media/sardinia.321c891eb22bad845572.jpeg",
     "static/media/sardinia.avif": "/static/media/sardinia.4be88db2c46c3a7a890d.avif",
@@ -268,11 +269,11 @@
     "static/media/mc.svg": "/static/media/mc.57a44e6b790198a77d48.svg",
     "static/media/pl.svg": "/static/media/pl.763e2468bffb1b7a479c.svg",
     "static/media/jp.svg": "/static/media/jp.09629d053dcc1f13082f.svg",
-    "main.66a8e2db.css.map": "/static/css/main.66a8e2db.css.map",
-    "main.1b51ebd7.js.map": "/static/js/main.1b51ebd7.js.map"
+    "main.159dffd3.css.map": "/static/css/main.159dffd3.css.map",
+    "main.0ab765c9.js.map": "/static/js/main.0ab765c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.66a8e2db.css",
-    "static/js/main.1b51ebd7.js"
+    "static/css/main.159dffd3.css",
+    "static/js/main.0ab765c9.js"
   ]
 }
