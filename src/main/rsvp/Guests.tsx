@@ -77,7 +77,6 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
   return (
     <>
       <Grid.Container
-        className="invite"
         style={{ alignItems: 'center', flexDirection: 'column' }}
         gap={0}
         justify="space-evenly"

@@ -47,10 +47,15 @@
   white-space: pre-line;
 }
 
-.invite {
+.rsvp-card {
   background-image: url('../resources/paper-white.jpg');
 }
 
 .rsvp-input {
   background-color: white;
+}
+
+.rsvp-wrapper {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }

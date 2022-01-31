@@ -8,7 +8,6 @@ import { Gifts } from './pages/Gifts'
 import { Header } from './header/Header'
 import { Photos } from './pages/Photos'
 import { ThankYou } from './pages/ThankYou'
-import { Book } from './pages/Book'
 import { RSVPConfirmed } from './pages/RSVPConfirmed'
 import { RSVPError } from './pages/RSVPError'
 
@@ -42,7 +41,6 @@ export const Page = () => {
         <Routes>
           <Route path="/" element={<Home mobileView={mobileView} />} />
           <Route path="/rsvp" element={<RSVP mobileView={mobileView} />} />
-          <Route path="/rsvp/:code" element={<Book />} />
           <Route path="/rsvp/confirmed" element={<RSVPConfirmed />} />
           <Route path="/rsvp/error" element={<RSVPError />} />
           <Route

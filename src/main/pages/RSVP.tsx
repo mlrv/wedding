@@ -12,9 +12,11 @@ import {
 import { findPartyByCode } from '../http/api'
 import { loadParNWithTimeout } from '../loader/utils'
 import { Loader } from '../loader/Loader'
-import { fold } from 'fp-ts/Option'
+import { fold, none, Option } from 'fp-ts/Option'
 import { Logo } from '../logo/Logo'
 import { useTranslation } from 'react-i18next'
+import { Book } from './Book'
+import { Party } from '../http/models'
 
 export const RSVP = (props: { mobileView: boolean }) => {
   useEffect(() => document.body.classList.remove('with-background'))
@@ -23,30 +25,31 @@ export const RSVP = (props: { mobileView: boolean }) => {
 
   const navigate = useNavigate()
   const { t } = useTranslation()
-  const { setVisible, bindings } = useModal()
-  const [state, setState] = useState('')
+  const modalLoading = useModal()
+  const modalGuests = useModal()
+  const [{ input, party }, setState] = useState({
+    input: '',
+    party: none as Option<Party>,
+  })
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setState(e.target.value.toUpperCase())
+    setState(prev => ({ ...prev, input: e.target.value.toUpperCase() }))
 
   const onSubmit = () => {
-    setVisible(true)
+    modalLoading.setVisible(true)
 
-    loadParNWithTimeout(() => findPartyByCode(state.toLowerCase()), 1500, 10000)
+    loadParNWithTimeout(() => findPartyByCode(input.toLowerCase()), 1500, 10000)
       .then(
         fold(
           () => navigate('/rsvp/error'),
           p => {
-            navigate(`./${state.toLowerCase()}`, {
-              state: {
-                rsvp: { type: 'asked', value: p },
-                mobileView: props.mobileView,
-              },
-            })
+            setState(prev => ({ ...prev, party: p }))
+            modalLoading.setVisible(false)
+            modalGuests.setVisible(true)
           },
         ),
       )
-      .catch(_ => navigate('/rsvp/error'))
+      .catch(_ => navigate('rsvp/error'))
   }
 
   return (
@@ -70,20 +73,37 @@ export const RSVP = (props: { mobileView: boolean }) => {
           </Text>
         </Grid>
         <Grid xs={24}>
-          <Input scale={2.5} value={state} onChange={inputHandler} />
+          <Input scale={2.5} value={input} onChange={inputHandler} />
         </Grid>
         <Spacer h={1} />
         <Grid xs={24}>
-          <Button disabled={state.length !== 4} onClick={onSubmit}>
+          <Button disabled={input.length !== 4} onClick={onSubmit}>
             {t('rsvp_submit')}
           </Button>
         </Grid>
         <Spacer h={1} />
       </Grid.Container>
 
-      <Modal {...bindings} disableBackdropClick={true} keyboard={false}>
+      <Modal
+        {...modalLoading.bindings}
+        disableBackdropClick={true}
+        keyboard={false}
+      >
         <Modal.Content>
           <Loader />
+        </Modal.Content>
+      </Modal>
+
+      <Modal
+        wrapClassName="rsvp-wrapper"
+        {...modalGuests.bindings}
+        keyboard={false}
+      >
+        <Modal.Content className="rsvp-card">
+          <Book
+            rsvp={{ type: 'asked', value: party }}
+            mobileView={props.mobileView}
+          />
         </Modal.Content>
       </Modal>
     </>
