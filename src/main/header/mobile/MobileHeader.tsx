@@ -20,9 +20,9 @@ export const MobileHeader = () => {
           <MobileDrawerContent />
         </Drawer.Content>
       </Drawer>
-      <Spacer w={2} />
+      <Spacer w={1.5} />
       <Grid style={{ alignSelf: 'flex-end' }}>
-        <Text className="font-cursive" font="35px">
+        <Text className="font-cursive" font="32px">
           Olivia & Marco
         </Text>
       </Grid>
