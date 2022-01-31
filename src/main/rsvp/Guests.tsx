@@ -28,7 +28,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const { setVisible, bindings } = useModal()
   const { t } = useTranslation()
 
-  const width = props.mobileView ? '55vw' : '70vw'
+  const width = props.mobileView ? '55vw' : '70.5vw'
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     setState(prev => ({ ...prev, email: e.target.value }))

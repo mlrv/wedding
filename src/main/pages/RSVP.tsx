@@ -95,6 +95,7 @@ export const RSVP = (props: { mobileView: boolean }) => {
       </Modal>
 
       <Modal
+        width="100vw"
         wrapClassName="rsvp-wrapper"
         {...modalGuests.bindings}
         keyboard={false}
