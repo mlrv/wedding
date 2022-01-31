@@ -43,10 +43,7 @@ export const Page = () => {
           <Route path="/rsvp" element={<RSVP mobileView={mobileView} />} />
           <Route path="/rsvp/confirmed" element={<RSVPConfirmed />} />
           <Route path="/rsvp/error" element={<RSVPError />} />
-          <Route
-            path="/information"
-            element={<Information mobileView={mobileView} />}
-          />
+          <Route path="/information" element={<Information />} />
           <Route path="/gifts" element={<Gifts />} />
           <Route path="/photos" element={<Photos />} />
           <Route path="/thankyou" element={<ThankYou />} />
