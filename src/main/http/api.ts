@@ -3,6 +3,7 @@ import { Either, right, map as mapE, fold, left } from 'fp-ts/Either'
 import { fromEither, map, none, Option } from 'fp-ts/Option'
 import { Party as TParty, ConfirmedGuestList } from './decoders'
 import { Party } from './models'
+import { Locale } from '../../i18/i18n'
 
 const urlBase = 'https://mlrv-wedding-api.herokuapp.com'
 const rsvpRoute = '/rsvp'
@@ -23,6 +24,7 @@ export const findPartyByCode = (c: string): Promise<Option<Party>> => {
 
 export const putPartyByCode = (
   c: string,
+  locale: Locale,
   update: Partial<Party>,
 ): Promise<Either<string, void>> => {
   const allGuestsConfirmed =
@@ -33,7 +35,10 @@ export const putPartyByCode = (
   const options = {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(update),
+    body: JSON.stringify({
+      locale,
+      update,
+    }),
   }
 
   const makeRequest = (): Promise<Either<string, void>> =>

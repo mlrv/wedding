@@ -19,6 +19,7 @@ import { useNavigate } from 'react-router-dom'
 import { Loader } from '../loader/Loader'
 import { loadParNWithTimeout } from '../loader/utils'
 import { useTranslation } from 'react-i18next'
+import { Locale } from '../../i18/i18n'
 
 export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const Input = GInput as any // ???
@@ -26,7 +27,7 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const [party, setState] = useState(props.party)
   const navigate = useNavigate()
   const { setVisible, bindings } = useModal()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const width = props.mobileView ? '55vw' : '70.5vw'
 
@@ -61,7 +62,11 @@ export const Guests = (props: { mobileView: boolean; party: Party }) => {
   const onSubmit = () => {
     setVisible(true)
 
-    loadParNWithTimeout(() => putPartyByCode(party.code, party), 1500, 20000)
+    loadParNWithTimeout(
+      () => putPartyByCode(party.code, i18n.language as Locale, party),
+      1500,
+      20000,
+    )
       .then(
         foldO(
           () => navigate('/rsvp/error'),
