@@ -1,6 +1,6 @@
 import Menu from '@geist-ui/react-icons/menu'
 
-import { Divider, Drawer, Grid, Spacer, Text } from '@geist-ui/react'
+import { Drawer, Grid, Spacer, Text } from '@geist-ui/react'
 import { useState } from 'react'
 import { MobileDrawerContent } from './MobileDrawerContent'
 
@@ -26,7 +26,6 @@ export const MobileHeader = () => {
           Olivia & Marco
         </Text>
       </Grid>
-      <Divider width={100} />
     </Grid.Container>
   )
 }
