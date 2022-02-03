@@ -29,9 +29,11 @@ export const Information = () => {
         </Text>
       </Grid>
       <Grid xs={24}>
-        <Text style={{ margin: 0 }} className="font-standard" font="15px">
-          Salita di S. Francesco - 16124 Genova
-        </Text>
+        <Link href="https://g.page/palazzodellameridiana">
+          <Text style={{ margin: 0 }} className="font-standard" font="15px">
+            Salita di S. Francesco - 16124 Genova
+          </Text>
+        </Link>
       </Grid>
       <Spacer h={4} />
       <Grid xs={24} lg={12}>
