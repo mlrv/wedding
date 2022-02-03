@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f7eb91ff.css",
-    "main.js": "/static/js/main.40f40de5.js",
+    "main.js": "/static/js/main.d703b8de.js",
     "static/media/logo.png": "/static/media/logo.12be48b1d9c7a87d02fd.png",
     "static/media/paper-white.jpg": "/static/media/paper-white.ced70d5d1ce19f7dfd8b.jpg",
     "static/media/sardinia.webp": "/static/media/sardinia.cf6833e36ad40e8631c8.webp",
@@ -258,8 +258,8 @@
     "static/media/fi.svg": "/static/media/fi.95d56fd9718802246342.svg",
     "static/media/gb-eng.svg": "/static/media/gb-eng.fa11359af89c8de10ea4.svg",
     "static/media/gb-zet.svg": "/static/media/gb-zet.e15b87bdfc96a351f843.svg",
-    "static/media/so.svg": "/static/media/so.a732ed4337f2dbef4d04.svg",
     "index.html": "/index.html",
+    "static/media/so.svg": "/static/media/so.a732ed4337f2dbef4d04.svg",
     "static/media/bh.svg": "/static/media/bh.fb2dfe186dd7d566c51c.svg",
     "static/media/qa.svg": "/static/media/qa.78697cb87a8cd0efacf0.svg",
     "static/media/ng.svg": "/static/media/ng.e019ea6ff1b3e37bc9c2.svg",
@@ -271,10 +271,10 @@
     "static/media/pl.svg": "/static/media/pl.763e2468bffb1b7a479c.svg",
     "static/media/jp.svg": "/static/media/jp.09629d053dcc1f13082f.svg",
     "main.f7eb91ff.css.map": "/static/css/main.f7eb91ff.css.map",
-    "main.40f40de5.js.map": "/static/js/main.40f40de5.js.map"
+    "main.d703b8de.js.map": "/static/js/main.d703b8de.js.map"
   },
   "entrypoints": [
     "static/css/main.f7eb91ff.css",
-    "static/js/main.40f40de5.js"
+    "static/js/main.d703b8de.js"
   ]
 }
