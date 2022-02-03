@@ -2,12 +2,9 @@ import Display from '@geist-ui/react-icons/display'
 import Instagram from '@geist-ui/react-icons/instagram'
 
 import { Grid, Link, Spacer, Text } from '@geist-ui/react'
-import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export const ThankYou = () => {
-  useEffect(() => document.body.classList.remove('with-background'))
-
   const { t } = useTranslation()
 
   return (

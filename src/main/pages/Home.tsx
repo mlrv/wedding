@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 export const Home = (props: { mobileView: boolean }) => {
   useEffect(() => document.body.classList.add('with-background'))
+  useEffect(() => () => document.body.classList.remove('with-background'), [])
 
   const { t } = useTranslation()
 

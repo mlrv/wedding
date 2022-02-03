@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Text,
@@ -19,8 +19,6 @@ import { Book } from './Book'
 import { Party } from '../http/models'
 
 export const RSVP = (props: { mobileView: boolean }) => {
-  useEffect(() => document.body.classList.remove('with-background'))
-
   const Input = GInput as any // ???
 
   const navigate = useNavigate()

@@ -1,10 +1,8 @@
 import meridiana from '../../resources/meridiana.jpg'
 import ganci from '../../resources/ganci.jpg'
 import { Image, Grid, Text, Spacer, Link } from '@geist-ui/react'
-import { useEffect } from 'react'
 
 export const Information = () => {
-  useEffect(() => document.body.classList.remove('with-background'))
 
   return (
     <Grid.Container
