@@ -65,6 +65,7 @@ export const Information = () => {
       <Grid xs={24} lg={12}>
         <Image className="ganci" src={ganci}></Image>
       </Grid>
+      <Spacer h={2}/>
     </Grid.Container>
   )
 }
