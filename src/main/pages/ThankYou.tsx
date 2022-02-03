@@ -17,7 +17,7 @@ export const ThankYou = () => {
     >
       <Grid xs={24}>
         <Text className="font-cursive" font="30px">
-          Nora con la ENNE
+          Nora con la Enne
         </Text>
       </Grid>
 
