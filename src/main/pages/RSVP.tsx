@@ -17,6 +17,7 @@ import { Logo } from '../logo/Logo'
 import { useTranslation } from 'react-i18next'
 import { Book } from './Book'
 import { Party } from '../http/models'
+import { Countdown } from '../countdown/Countdown'
 
 export const RSVP = (props: { mobileView: boolean }) => {
   const Input = GInput as any // ???
@@ -61,6 +62,10 @@ export const RSVP = (props: { mobileView: boolean }) => {
         <Grid xs={24}>
           <Logo width={35} />
         </Grid>
+        <Grid xs={24}>
+          <Countdown />
+        </Grid>
+        <Spacer h={props.mobileView ? 0 : 1} />
         <Grid xs={24}>
           <Text
             font="20px"

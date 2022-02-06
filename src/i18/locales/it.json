@@ -18,6 +18,9 @@
     "rsvp_diet_vegan": "Sono vegana/o",
     "rsvp_comments": "Altri commenti...",
     "rsvp_error": "Qualcosa è andato storto... Scrivici un messaggio o mandaci una mail a",
-    "rsvp_confirmed": "Ti abbiamo mandato una mail di conferma. Se hai domande scrivici un messaggio o mandaci una mail a"
+    "rsvp_confirmed": "Ti abbiamo mandato una mail di conferma. Se hai domande scrivici un messaggio o mandaci una mail a",
+    "countdown_days": "Giorni",
+    "countdown_hours": "Ore",
+    "countdown_minutes": "Minuti"
   }
 }
