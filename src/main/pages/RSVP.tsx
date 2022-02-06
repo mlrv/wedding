@@ -36,7 +36,7 @@ export const RSVP = (props: { mobileView: boolean }) => {
   const onSubmit = () => {
     modalLoading.setVisible(true)
 
-    loadParNWithTimeout(() => findPartyByCode(input.toLowerCase()), 1500, 20000)
+    loadParNWithTimeout(() => findPartyByCode(input.toUpperCase()), 1500, 20000)
       .then(
         fold(
           () => navigate('/rsvp/error'),
