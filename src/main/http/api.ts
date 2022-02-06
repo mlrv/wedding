@@ -42,7 +42,7 @@ export const putPartyByCode = (
   }
 
   const makeRequest = (): Promise<Either<string, void>> =>
-    fetch(`${url}/${c}`, options)
+    fetch(`${url}/${c}?email=true`, options)
       .then(r =>
         r.status === 200 ? right(constVoid()) : left('Unexpected error'),
       )
