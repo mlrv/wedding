@@ -3,7 +3,6 @@ import ganci from '../../resources/ganci.jpg'
 import { Image, Grid, Text, Spacer, Link } from '@geist-ui/react'
 
 export const Information = () => {
-
   return (
     <Grid.Container
       style={{ alignItems: 'center', flexDirection: 'column' }}
@@ -22,9 +21,11 @@ export const Information = () => {
         </Text>
       </Grid>
       <Grid xs={24}>
-        <Text style={{ margin: 0 }} className="font-cursive" font="30px">
-          Palazzo della Meridiana
-        </Text>
+        <Link href="https://g.page/palazzodellameridiana">
+          <Text style={{ margin: 0 }} className="font-cursive" font="30px">
+            Palazzo della Meridiana
+          </Text>
+        </Link>
       </Grid>
       <Grid xs={24}>
         <Link href="https://g.page/palazzodellameridiana">
@@ -48,9 +49,11 @@ export const Information = () => {
         </Text>
       </Grid>
       <Grid xs={24}>
-        <Text style={{ margin: 0 }} className="font-cursive" font="30px">
-          Ganci Farm
-        </Text>
+        <Link href="https://goo.gl/maps/aT6Fr9Z98MkXGFYA8">
+          <Text style={{ margin: 0 }} className="font-cursive" font="30px">
+            Ganci Farm
+          </Text>
+        </Link>
       </Grid>
       <Grid xs={24}>
         <Link href="https://goo.gl/maps/aT6Fr9Z98MkXGFYA8">
@@ -63,7 +66,7 @@ export const Information = () => {
       <Grid xs={24} lg={12}>
         <Image className="ganci" src={ganci}></Image>
       </Grid>
-      <Spacer h={2}/>
+      <Spacer h={2} />
     </Grid.Container>
   )
 }
