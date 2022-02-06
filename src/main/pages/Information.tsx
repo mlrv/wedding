@@ -1,5 +1,5 @@
 import meridiana from '../../resources/meridiana.jpg'
-import ganci from '../../resources/ganci.jpg'
+import ganci from '../../resources/ganci.png'
 import { Image, Grid, Text, Spacer, Link } from '@geist-ui/react'
 
 export const Information = () => {
