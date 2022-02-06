@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.747e92ec.css",
-    "main.js": "/static/js/main.f07644f5.js",
+    "main.js": "/static/js/main.5fb9aecf.js",
     "static/media/paper-white.jpg": "/static/media/paper-white.ced70d5d1ce19f7dfd8b.jpg",
     "static/media/sardinia.webp": "/static/media/sardinia.cf6833e36ad40e8631c8.webp",
     "static/media/ganci.png": "/static/media/ganci.8b01315e577d158acfbe.png",
@@ -271,10 +271,10 @@
     "static/media/pl.svg": "/static/media/pl.763e2468bffb1b7a479c.svg",
     "static/media/jp.svg": "/static/media/jp.09629d053dcc1f13082f.svg",
     "main.747e92ec.css.map": "/static/css/main.747e92ec.css.map",
-    "main.f07644f5.js.map": "/static/js/main.f07644f5.js.map"
+    "main.5fb9aecf.js.map": "/static/js/main.5fb9aecf.js.map"
   },
   "entrypoints": [
     "static/css/main.747e92ec.css",
-    "static/js/main.f07644f5.js"
+    "static/js/main.5fb9aecf.js"
   ]
 }
