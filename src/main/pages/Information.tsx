@@ -22,7 +22,7 @@ export const Information = () => {
       </Grid>
       <Grid xs={24}>
         <Link href="https://g.page/palazzodellameridiana">
-          <Text style={{ margin: 0 }} className="font-cursive" font="30px">
+          <Text style={{ margin: 0 }} className="font-cursive" font="25px">
             Palazzo della Meridiana
           </Text>
         </Link>
@@ -50,7 +50,7 @@ export const Information = () => {
       </Grid>
       <Grid xs={24}>
         <Link href="https://goo.gl/maps/aT6Fr9Z98MkXGFYA8">
-          <Text style={{ margin: 0 }} className="font-cursive" font="30px">
+          <Text style={{ margin: 0 }} className="font-cursive" font="25px">
             Ganci Farm
           </Text>
         </Link>
