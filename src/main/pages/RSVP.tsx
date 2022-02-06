@@ -75,7 +75,7 @@ export const RSVP = (props: { mobileView: boolean }) => {
         </Grid>
         <Spacer h={1} />
         <Grid xs={24}>
-          <Button disabled={input.length !== 4} onClick={onSubmit}>
+          <Button disabled={input.length !== 5} onClick={onSubmit}>
             {t('rsvp_submit')}
           </Button>
         </Grid>
