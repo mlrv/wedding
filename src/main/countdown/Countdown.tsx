@@ -17,7 +17,7 @@ export const Countdown = () => {
       return <></>
     } else {
       return (
-        <Text className="font-standard">
+        <Text className="font-standard no-vertical-margin" font="16px">
           {[
             days,
             t('countdown_days'),

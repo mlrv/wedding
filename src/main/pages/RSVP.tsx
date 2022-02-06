@@ -63,9 +63,13 @@ export const RSVP = (props: { mobileView: boolean }) => {
           <Logo width={35} />
         </Grid>
         <Grid xs={24}>
+          <Text className="font-standard no-vertical-margin" font="23px">
+            {t('eleventh_june')}
+          </Text>
+        </Grid>
+        <Grid xs={24}>
           <Countdown />
         </Grid>
-        <Spacer h={props.mobileView ? 0 : 1} />
         <Grid xs={24}>
           <Text
             font="20px"
