@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.f7eb91ff.css",
-    "main.js": "/static/js/main.d703b8de.js",
-    "static/media/logo.png": "/static/media/logo.12be48b1d9c7a87d02fd.png",
+    "main.css": "/static/css/main.747e92ec.css",
+    "main.js": "/static/js/main.f07644f5.js",
     "static/media/paper-white.jpg": "/static/media/paper-white.ced70d5d1ce19f7dfd8b.jpg",
     "static/media/sardinia.webp": "/static/media/sardinia.cf6833e36ad40e8631c8.webp",
+    "static/media/ganci.png": "/static/media/ganci.8b01315e577d158acfbe.png",
     "static/media/sardinia.jpeg": "/static/media/sardinia.321c891eb22bad845572.jpeg",
+    "static/media/logo.png": "/static/media/logo.0054fcdcc24b51975b33.png",
     "static/media/sardinia.avif": "/static/media/sardinia.4be88db2c46c3a7a890d.avif",
     "static/media/meridiana.jpg": "/static/media/meridiana.11a7ceab73e388b50a44.jpg",
-    "static/media/ganci.jpg": "/static/media/ganci.26f007bfcfad04c57a8d.jpg",
     "static/media/Quicksand.ttf": "/static/media/Quicksand.109d09e5f7c827d891ab.ttf",
-    "static/media/PhotographSignature.ttf": "/static/media/PhotographSignature.fd3e04eb226c510fbf36.ttf",
+    "static/media/Parisienne.ttf": "/static/media/Parisienne.82a775783a33ce6f911d.ttf",
     "static/media/gp.svg": "/static/media/gp.603ee58d520b8ca1b075.svg",
     "static/media/gs.svg": "/static/media/gs.a93dfcd2078b5d7760b3.svg",
     "static/media/vi.svg": "/static/media/vi.5d0cbff93c152d6fce1f.svg",
@@ -270,11 +270,11 @@
     "static/media/mc.svg": "/static/media/mc.57a44e6b790198a77d48.svg",
     "static/media/pl.svg": "/static/media/pl.763e2468bffb1b7a479c.svg",
     "static/media/jp.svg": "/static/media/jp.09629d053dcc1f13082f.svg",
-    "main.f7eb91ff.css.map": "/static/css/main.f7eb91ff.css.map",
-    "main.d703b8de.js.map": "/static/js/main.d703b8de.js.map"
+    "main.747e92ec.css.map": "/static/css/main.747e92ec.css.map",
+    "main.f07644f5.js.map": "/static/js/main.f07644f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7eb91ff.css",
-    "static/js/main.d703b8de.js"
+    "static/css/main.747e92ec.css",
+    "static/js/main.f07644f5.js"
   ]
 }
