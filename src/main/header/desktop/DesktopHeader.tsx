@@ -4,7 +4,6 @@ import { Gifts } from '../links/Gifts'
 import { Home } from '../links/Home'
 import { RSVP } from '../links/RSVP'
 import { Information } from '../links/Information'
-import { Photos } from '../links/Photos'
 import { ThankYou } from '../links/ThankYou'
 
 export const DesktopHeader = () => {
@@ -32,9 +31,6 @@ export const DesktopHeader = () => {
         </Grid>
         <Grid xs={3}>
           <Gifts />
-        </Grid>
-        <Grid xs={3}>
-          <Photos />
         </Grid>
         <Grid xs={3}>
           <ThankYou />
