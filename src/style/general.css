@@ -48,7 +48,9 @@
 }
 
 .rsvp-card {
-  background-image: url('../resources/paper-white.jpg');
+  background-image: url('../resources/rsvp-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .rsvp-input {
