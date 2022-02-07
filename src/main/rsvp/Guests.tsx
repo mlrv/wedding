@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   Button,
   Grid,
@@ -22,6 +22,14 @@ import { useTranslation } from 'react-i18next'
 import { Locale } from '../../i18/i18n'
 
 export const Guests = (props: { mobileView: boolean; party: Party }) => {
+  useEffect(() =>
+    document.getElementById('rsvp-card')?.classList.add('rsvp-card'),
+  )
+  useEffect(
+    () => () =>
+      document.getElementById('rsvp-card')?.classList.remove('rsvp-card'),
+  )
+
   const Input = GInput as any // ???
 
   const [party, setState] = useState(props.party)

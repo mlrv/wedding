@@ -107,7 +107,7 @@ export const RSVP = (props: { mobileView: boolean }) => {
         {...modalGuests.bindings}
         keyboard={false}
       >
-        <Modal.Content className="rsvp-card">
+        <Modal.Content id='rsvp-card'>
           <Book
             rsvp={{ type: 'asked', value: party }}
             mobileView={props.mobileView}

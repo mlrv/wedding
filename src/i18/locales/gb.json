@@ -19,6 +19,7 @@
     "rsvp_comments": "Dietary requirements / comments",
     "rsvp_error": "Something went wrong... Send us a message, or email us at",
     "rsvp_confirmed": "We just sent you a confirmation email. If you have any question, send us a message or email us at",
+    "rsvp_not_found": "Oh no :( \n\n It looks like this code is not valid, did you enter it correctly?",
     "countdown_days": "Days",
     "countdown_hours": "Hours",
     "countdown_minutes": "Minutes"
