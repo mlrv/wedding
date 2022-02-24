@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import hawaii from '../../resources/hawaii.jpg'
 import monument from '../../resources/monument.jpg'
+import plane from '../../resources/plane.png'
 
 export const Gifts = (props: { mobileView: boolean }) => {
   const { t } = useTranslation()
@@ -22,18 +23,22 @@ export const Gifts = (props: { mobileView: boolean }) => {
         </Text>
       </Grid>
       <Grid>
+        <Spacer h={1} />
+        <Image src={plane} />
+      </Grid>
+      <Grid>
         <Grid.Container justify="center" style={{ alignItems: 'center' }}>
           <Spacer h={1} />
           <Text
             className="font-standard"
-            style={{ marginBottom: 5, marginTop: 0 }}
+            style={{ marginBottom: 40, marginTop: 0 }}
             font="30px"
           >
-            <Link color underline href="https://noragallia.com">
+            <Link color underline href="https://www.ilmondocapovoltoviaggi.it/">
               {t('gifts_link')}
             </Link>
           </Text>
-          <Spacer h={12} />
+          <Spacer h={6} />
         </Grid.Container>
       </Grid>
       <Grid xs={24} lg={10}>
