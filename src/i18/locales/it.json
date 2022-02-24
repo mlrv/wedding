@@ -2,7 +2,7 @@
   "common": {
     "hello": "Ciao",
     "information": "Informazioni",
-    "gifts": "Regali",
+    "gifts": "Lista",
     "photos": "Foto",
     "thank_you": "Grazie",
     "thank_you_content": "Vogliamo ringraziare di cuore la nostra amica Nora Gallia per la sua magnifica illustrazione e tutto il suo prezioso aiuto nel preparare il matrimonio. \n\n Se avete bisogno di un'illustrazione, date un'occhiata ai lavori di Nora!",
@@ -23,6 +23,8 @@
     "rsvp_not_found": "Oh no :( \n\n Sembra che questo codice non sia valido, lo hai inserito correttamente?",
     "countdown_days": "Giorni",
     "countdown_hours": "Ore",
-    "countdown_minutes": "Minuti"
+    "countdown_minutes": "Minuti",
+    "gifts_content": "Il regalo più bello che potete farci è la vostra presenza al nostro matrimonio per poter festeggiare tutti insieme! \n \n Se avete piacere, potete anche contribuire al nostro viaggio di nozze ❤️",
+    "gifts_link": "Lista Viaggio"
   }
 }

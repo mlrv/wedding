@@ -1,7 +1,15 @@
-.meridiana {
-	box-shadow: -50px -50px #DC6D65;
+.shadow-red-top-left-desktop {
+  box-shadow: -40px -40px #dc6d65;
 }
 
-.ganci {
-	box-shadow: 50px 50px #8DBCC0;
+.shadow-red-top-left-mobile {
+  box-shadow: -20px -20px #dc6d65;
+}
+
+.shadow-blue-bottom-right-desktop {
+  box-shadow: 40px 40px #8dbcc0;
+}
+
+.shadow-blue-bottom-right-mobile {
+  box-shadow: 20px 20px #8dbcc0;
 }

@@ -2,7 +2,7 @@ import meridiana from '../../resources/meridiana.jpg'
 import ganci from '../../resources/ganci.png'
 import { Image, Grid, Text, Spacer, Link } from '@geist-ui/react'
 
-export const Information = () => {
+export const Information = (props: { mobileView: boolean }) => {
   return (
     <Grid.Container
       style={{ alignItems: 'center', flexDirection: 'column' }}
@@ -28,7 +28,7 @@ export const Information = () => {
         </Link>
       </Grid>
       <Grid xs={24}>
-        <Link href="https://g.page/palazzodellameridiana">
+        <Link color underline href="https://g.page/palazzodellameridiana">
           <Text style={{ margin: 0 }} className="font-standard" font="15px">
             Salita di S. Francesco - 16124 Genova
           </Text>
@@ -36,7 +36,12 @@ export const Information = () => {
       </Grid>
       <Spacer h={4} />
       <Grid xs={24} lg={12}>
-        <Image className="meridiana" src={meridiana}></Image>
+        <Image
+          className={
+            props.mobileView ? 'shadow-red-top-left-mobile' : 'shadow-red-top-left-desktop'
+          }
+          src={meridiana}
+        ></Image>
       </Grid>
       <Spacer h={2} />
       <Grid xs={24}>
@@ -56,7 +61,7 @@ export const Information = () => {
         </Link>
       </Grid>
       <Grid xs={24}>
-        <Link href="https://goo.gl/maps/aT6Fr9Z98MkXGFYA8">
+        <Link color underline href="https://goo.gl/maps/aT6Fr9Z98MkXGFYA8">
           <Text style={{ margin: 0 }} className="font-standard" font="15px">
             Via Ganci - 17015 Celle Ligure
           </Text>
@@ -64,7 +69,10 @@ export const Information = () => {
       </Grid>
       <Spacer h={2} />
       <Grid xs={24} lg={12}>
-        <Image className="ganci" src={ganci}></Image>
+        <Image
+          className={props.mobileView ? 'shadow-blue-bottom-right-mobile' : 'shadow-blue-bottom-right-desktop'}
+          src={ganci}
+        ></Image>
       </Grid>
       <Spacer h={2} />
     </Grid.Container>

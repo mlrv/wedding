@@ -2,7 +2,7 @@
   "common": {
     "hello": "Hello",
     "information": "Information",
-    "gifts": "Gifts",
+    "gifts": "Registry",
     "photos": "Photos",
     "thank_you": "Thank You",
     "thank_you_content": "We want to sincerely thank our friend Nora Gallia for her magnificent illustration and all her precious help in preparing the wedding. \n \n If you need an illustration, check out Nora's work!",
@@ -23,6 +23,8 @@
     "rsvp_not_found": "Oh no :( \n\n It looks like this code is not valid, did you enter it correctly?",
     "countdown_days": "Days",
     "countdown_hours": "Hours",
-    "countdown_minutes": "Minutes"
+    "countdown_minutes": "Minutes",
+    "gifts_content": "All we truly desire is your presence at our wedding to help us celebrate in style! \n \n For those that wish to gift us something, we have made a gift list where you can make a contribution towards our dream honeymoon ❤️",
+    "gifts_link": "Gift List"
   }
 }
