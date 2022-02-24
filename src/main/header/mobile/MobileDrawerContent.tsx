@@ -1,4 +1,4 @@
-import {  Grid } from '@geist-ui/react'
+import { Grid } from '@geist-ui/react'
 import { SelectI18N } from '../../../i18/select'
 import { Gifts } from '../links/Gifts'
 import { Home } from '../links/Home'
@@ -16,10 +16,10 @@ export const MobileDrawerContent = () => {
         <Home />
       </Grid>
       <Grid xs={24}>
-        <RSVP />
+        <Information />
       </Grid>
       <Grid xs={24}>
-        <Information />
+        <RSVP />
       </Grid>
       <Grid xs={24}>
         <Gifts />

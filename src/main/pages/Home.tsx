@@ -9,7 +9,20 @@ export const Home = (props: { mobileView: boolean }) => {
   const { t } = useTranslation()
 
   return props.mobileView ? (
-    <></>
+    <Grid.Container
+      style={{ alignItems: 'center', flexDirection: 'column' }}
+      gap={0}
+      justify="space-evenly"
+      width="100%"
+    >
+      <Text
+        style={{ marginTop: '-20px', marginBottom: 0 }}
+        className="font-cursive"
+        font="35px"
+      >
+        {t('eleventh_june')}
+      </Text>
+    </Grid.Container>
   ) : (
     <Grid.Container
       style={{ alignItems: 'center', flexDirection: 'column' }}

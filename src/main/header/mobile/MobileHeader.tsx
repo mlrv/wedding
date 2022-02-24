@@ -8,8 +8,7 @@ export const MobileHeader = () => {
   const [state, setState] = useState(false)
 
   return (
-    <Grid.Container style={{ alignItems: 'center' }} width="100%">
-      <Menu onClick={() => setState(true)} />
+    <>
       <Drawer
         visible={state}
         onContentClick={() => setState(false)}
@@ -20,12 +19,33 @@ export const MobileHeader = () => {
           <MobileDrawerContent />
         </Drawer.Content>
       </Drawer>
-      <Spacer w={1.5} />
-      <Grid style={{ alignSelf: 'flex-end' }}>
-        <Text className="font-cursive" font="32px">
-          Olivia & Marco
-        </Text>
-      </Grid>
-    </Grid.Container>
+
+      <Grid.Container
+        style={{ alignItems: 'center', flexDirection: 'column' }}
+        gap={0}
+        justify="space-evenly"
+        width="100%"
+      >
+        <Grid xs={24}>
+          <Grid.Container style={{ alignItems: 'center' }} width="100%">
+            <Grid>
+              <Menu onClick={() => setState(true)} />
+            </Grid>
+            <Grid>
+              <Spacer h={2} />
+            </Grid>
+            <Grid>
+              <Text
+                onClick={() => setState(true)}
+                className="font-cursive"
+                font="32px"
+              >
+                Olivia & Marco
+              </Text>
+            </Grid>
+          </Grid.Container>
+        </Grid>
+      </Grid.Container>
+    </>
   )
 }
