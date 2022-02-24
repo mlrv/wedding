@@ -1,4 +1,4 @@
-export type Diet = 'omnivore' | 'pescatarian' | 'vegetarian' | 'vegan'
+export type Diet = 'omnivore' | 'pescatarian' | 'vegetarian' | 'vegan' | 'gluten_free'
 
 export type UnconfirmedGuest = {
   name: string

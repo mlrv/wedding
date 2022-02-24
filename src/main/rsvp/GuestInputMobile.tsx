@@ -17,7 +17,9 @@ export const GuestInputMobile = (props: {
   const width = '55vw'
 
   const isValidDiet = (d: string): d is Diet =>
-    ['omnivore', 'pescatarian', 'vegetarian', 'vegan'].includes(d)
+    ['omnivore', 'pescatarian', 'vegetarian', 'vegan', 'gluten_free'].includes(
+      d,
+    )
 
   const onUpdate = (update: Partial<Guest>) =>
     props.updateGuest(props.guest.name, update)
@@ -109,14 +111,19 @@ export const GuestInputMobile = (props: {
               {t('rsvp_diet_vegetarian')}
             </Text>
           </Select.Option>
+          <Select.Option value="vegan">
+            <Text font="16px" className="font-standard">
+              {t('rsvp_diet_vegan')}
+            </Text>
+          </Select.Option>
           <Select.Option value="pescatarian">
             <Text font="16px" className="font-standard">
               {t('rsvp_diet_pescatarian')}
             </Text>
           </Select.Option>
-          <Select.Option value="vegan">
+          <Select.Option value="gluten_free">
             <Text font="16px" className="font-standard">
-              {t('rsvp_diet_vegan')}
+              {t('rsvp_diet_gluten_free')}
             </Text>
           </Select.Option>
         </Select>
