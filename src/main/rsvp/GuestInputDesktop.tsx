@@ -133,9 +133,8 @@ export const GuestInputDesktop = (props: {
           scale={1.5}
           placeholder={t('rsvp_comments')}
           width="100%"
-          value={'comments' in guest && isEditable() ? guest.comments : ''}
+          value={'comments' in guest ? guest.comments : ''}
           onChange={onCommentsUpdate}
-          disabled={!isEditable()}
         />
       </Grid>
     </Grid.Container>
