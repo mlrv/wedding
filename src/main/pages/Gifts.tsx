@@ -27,28 +27,37 @@ export const Gifts = (props: { mobileView: boolean }) => {
         <Image src={plane} />
       </Grid>
       <Grid>
-        <Grid.Container justify="center" style={{ alignItems: 'center' }}>
+        <Grid.Container
+          justify="center"
+          style={{ alignItems: 'center', flexDirection: 'column' }}
+        >
           <Spacer h={1} />
-          <Text
-            className="font-standard"
-            style={{ marginBottom: 20, marginTop: 0 }}
-            font="30px"
-          >
-            <Link
-              color
-              underline
-              href="https://www.ilmondocapovoltoviaggi.it/liste-nozze/lista-nozze/M1JCdXZLbGJ0ZVNxTTIwY2ZzOS9sZz09"
+          <Grid xs={24}>
+            <Text
+              className="font-standard"
+              style={{ marginBottom: 20, marginTop: 0 }}
+              font="30px"
             >
-              {t('gifts_link')}
-            </Link>
-          </Text>
-          <Text
-            className="font-standard"
-            style={{ textAlign: 'center', marginTop: 0 }}
-            font="13px"
-          >
-            {t('gifts_translate')}
-          </Text>
+              <Link
+                color
+                underline
+                href="https://www.ilmondocapovoltoviaggi.it/liste-nozze/lista-nozze/M1JCdXZLbGJ0ZVNxTTIwY2ZzOS9sZz09"
+              >
+                {t('gifts_link')}
+              </Link>
+            </Text>
+          </Grid>
+
+          <Grid xs={24}>
+            <Text
+              className="font-standard"
+              style={{ textAlign: 'center', marginTop: 0 }}
+              font="13px"
+            >
+              {t('gifts_translate')}
+            </Text>
+          </Grid>
+
           <Spacer h={6} />
         </Grid.Container>
       </Grid>
