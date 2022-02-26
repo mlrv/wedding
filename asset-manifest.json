@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.82f428e9.css",
-    "main.js": "/static/js/main.ffae211f.js",
+    "main.js": "/static/js/main.272acdbe.js",
     "static/media/sardinia.webp": "/static/media/sardinia.cf6833e36ad40e8631c8.webp",
     "static/media/hawaii.jpg": "/static/media/hawaii.75d7546ba9b3ac6918ec.jpg",
     "static/media/monument.jpg": "/static/media/monument.ff63e00eea9f4c8396ac.jpg",
@@ -274,10 +274,10 @@
     "static/media/pl.svg": "/static/media/pl.763e2468bffb1b7a479c.svg",
     "static/media/jp.svg": "/static/media/jp.09629d053dcc1f13082f.svg",
     "main.82f428e9.css.map": "/static/css/main.82f428e9.css.map",
-    "main.ffae211f.js.map": "/static/js/main.ffae211f.js.map"
+    "main.272acdbe.js.map": "/static/js/main.272acdbe.js.map"
   },
   "entrypoints": [
     "static/css/main.82f428e9.css",
-    "static/js/main.ffae211f.js"
+    "static/js/main.272acdbe.js"
   ]
 }
