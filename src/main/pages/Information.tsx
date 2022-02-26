@@ -1,8 +1,11 @@
 import meridiana from '../../resources/meridiana.jpg'
 import ganci from '../../resources/ganci.png'
 import { Image, Grid, Text, Spacer, Link } from '@geist-ui/react'
+import { useTranslation } from 'react-i18next'
 
 export const Information = (props: { mobileView: boolean }) => {
+  const { t } = useTranslation()
+
   return (
     <Grid.Container
       style={{ alignItems: 'center', flexDirection: 'column' }}
@@ -16,8 +19,7 @@ export const Information = (props: { mobileView: boolean }) => {
           className="font-standard"
           font="20px"
         >
-          Saremo felici di festeggiare insieme Sabato 11 Giugno 2022 alle ore
-          16:30 presso
+          {t('information_content_first')}
         </Text>
       </Grid>
       <Grid xs={24}>
@@ -38,7 +40,9 @@ export const Information = (props: { mobileView: boolean }) => {
       <Grid xs={24} lg={12}>
         <Image
           className={
-            props.mobileView ? 'shadow-red-top-left-mobile' : 'shadow-red-top-left-desktop'
+            props.mobileView
+              ? 'shadow-red-top-left-mobile'
+              : 'shadow-red-top-left-desktop'
           }
           src={meridiana}
         ></Image>
@@ -50,7 +54,7 @@ export const Information = (props: { mobileView: boolean }) => {
           className="font-standard"
           font="20px"
         >
-          I festeggiamenti continuerranno a partire dalle 18:30 presso
+          {t('information_content_second')}
         </Text>
       </Grid>
       <Grid xs={24}>
@@ -70,7 +74,11 @@ export const Information = (props: { mobileView: boolean }) => {
       <Spacer h={2} />
       <Grid xs={24} lg={12}>
         <Image
-          className={props.mobileView ? 'shadow-blue-bottom-right-mobile' : 'shadow-blue-bottom-right-desktop'}
+          className={
+            props.mobileView
+              ? 'shadow-blue-bottom-right-mobile'
+              : 'shadow-blue-bottom-right-desktop'
+          }
           src={ganci}
         ></Image>
       </Grid>
