@@ -49,7 +49,7 @@ export const Gifts = (props: { mobileView: boolean }) => {
           >
             {t('gifts_translate')}
           </Text>
-          <Spacer h={3} />
+          <Spacer h={6} />
         </Grid.Container>
       </Grid>
       <Grid xs={24} lg={10}>
