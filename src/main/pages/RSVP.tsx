@@ -73,7 +73,7 @@ export const RSVP = (props: { mobileView: boolean }) => {
         <Grid xs={24}>
           <Text
             font="20px"
-            className="font-standard"
+            className="font-standard newline"
             style={{ textAlign: 'center' }}
           >
             {t('rsvp_instructions')}
@@ -107,7 +107,7 @@ export const RSVP = (props: { mobileView: boolean }) => {
         {...modalGuests.bindings}
         keyboard={false}
       >
-        <Modal.Content id='rsvp-card'>
+        <Modal.Content id="rsvp-card">
           <Book
             rsvp={{ type: 'asked', value: party }}
             mobileView={props.mobileView}
