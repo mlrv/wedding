@@ -1,6 +1,6 @@
 import meridiana from '../../resources/meridiana.jpg'
 import ganci from '../../resources/ganci.png'
-import { Image, Grid, Text, Spacer, Link } from '@geist-ui/react'
+import { Image, Grid, Text, Spacer, Link, Divider } from '@geist-ui/react'
 import { useTranslation } from 'react-i18next'
 
 export const Information = (props: { mobileView: boolean }) => {
@@ -15,7 +15,10 @@ export const Information = (props: { mobileView: boolean }) => {
     >
       <Grid xs={24} lg={6} xl={6}>
         <Text
-          style={{ textAlign: 'center', marginBottom: 5 }}
+          style={{
+            textAlign: 'center',
+            marginBottom: 5,
+          }}
           className="font-standard"
           font="20px"
         >
@@ -146,6 +149,19 @@ export const Information = (props: { mobileView: boolean }) => {
       <Grid xs={24}>
         <Text i className="font-standard" font="18px" style={{ marginTop: 0 }}>
           {t('information_schedule_dance')}
+        </Text>
+        <Spacer h={2.5} />
+      </Grid>
+      <Grid xs={24}>
+        <Divider width={100} />
+      </Grid>
+      <Grid xs={24}>
+        <Text
+          className="font-standard"
+          font="18px"
+          style={{ textAlign: 'center' }}
+        >
+          {t('information_faq_ganci')}
         </Text>
       </Grid>
     </Grid.Container>
