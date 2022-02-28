@@ -83,6 +83,71 @@ export const Information = (props: { mobileView: boolean }) => {
         ></Image>
       </Grid>
       <Spacer h={2} />
+      <Grid xs={24}>
+        <Text className="font-cursive" font="35px" style={{ marginBottom: 10 }}>
+          {t('information_schedule')}
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text className="font-standard no-vertical-margin" font="18px">
+          16:30 👩‍❤️‍👨
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text i className="font-standard" font="18px" style={{ marginTop: 0 }}>
+          {t('information_schedule_ceremony')}
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text className="font-standard no-vertical-margin" font="18px">
+          17:30 🚗
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text i className="font-standard" font="18px" style={{ marginTop: 0 }}>
+          {t('information_schedule_transfer')}
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text className="font-standard no-vertical-margin" font="18px">
+          18:30 🥂
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text i className="font-standard" font="18px" style={{ marginTop: 0 }}>
+          {t('information_schedule_party')}
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text className="font-standard no-vertical-margin" font="18px">
+          18:30 😋
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text i className="font-standard" font="18px" style={{ marginTop: 0 }}>
+          {t('information_schedule_dinner')}
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text className="font-standard no-vertical-margin" font="18px">
+          22:30 🧁
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text i className="font-standard" font="18px" style={{ marginTop: 0 }}>
+          {t('information_schedule_cake')}
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text className="font-standard no-vertical-margin" font="18px">
+          23:00 💃🏻
+        </Text>
+      </Grid>
+      <Grid xs={24}>
+        <Text i className="font-standard" font="18px" style={{ marginTop: 0 }}>
+          {t('information_schedule_dance')}
+        </Text>
+      </Grid>
     </Grid.Container>
   )
 }

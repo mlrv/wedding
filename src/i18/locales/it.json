@@ -28,6 +28,13 @@
     "gifts_link": "Lista Viaggio",
     "gifts_translate": "",
     "information_content_first": "Ci sposiamo Sabato 11 Giugno 2022 alle ore 16:30, presso",
-    "information_content_second": "Finita la cerimonia, continueremo i festeggiamenti a partire dalle ore 18:30, presso"
+    "information_content_second": "Finita la cerimonia, continueremo i festeggiamenti a partire dalle ore 18:30, presso",
+    "information_schedule": "Programma",
+    "information_schedule_ceremony": "Cerimonia",
+    "information_schedule_transfer": "Trasferimento a Ganci Farm",
+    "information_schedule_party": "Aperitivo",
+    "information_schedule_dinner": "Cena",
+    "information_schedule_cake": "Taglio della torta",
+    "information_schedule_dance": "Danze & DJ set"
   }
 }
