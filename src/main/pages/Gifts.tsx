@@ -1,7 +1,7 @@
 import { Grid, Link, Spacer, Text, Image } from '@geist-ui/react'
 import { useTranslation } from 'react-i18next'
 
-import hawaii from '../../resources/hawaii.jpg'
+import moorea from '../../resources/moorea.jpg'
 import monument from '../../resources/monument.jpg'
 import plane from '../../resources/plane.png'
 
@@ -81,7 +81,7 @@ export const Gifts = (props: { mobileView: boolean }) => {
               ? 'shadow-blue-bottom-right-mobile'
               : 'shadow-blue-bottom-right-desktop'
           }
-          src={hawaii}
+          src={moorea}
         ></Image>
       </Grid>
     </Grid.Container>
