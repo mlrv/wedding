@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.82f428e9.css",
-    "main.js": "/static/js/main.7965b688.js",
+    "main.js": "/static/js/main.39cad9ec.js",
     "static/media/sardinia.webp": "/static/media/sardinia.cf6833e36ad40e8631c8.webp",
-    "static/media/hawaii.jpg": "/static/media/hawaii.75d7546ba9b3ac6918ec.jpg",
     "static/media/monument.jpg": "/static/media/monument.ff63e00eea9f4c8396ac.jpg",
     "static/media/ganci.png": "/static/media/ganci.8b01315e577d158acfbe.png",
     "static/media/sardinia.jpeg": "/static/media/sardinia.321c891eb22bad845572.jpeg",
     "static/media/rsvp-background.png": "/static/media/rsvp-background.da895bd7a11c0a95e8c5.png",
     "static/media/logo.png": "/static/media/logo.0054fcdcc24b51975b33.png",
     "static/media/sardinia.avif": "/static/media/sardinia.4be88db2c46c3a7a890d.avif",
+    "static/media/moorea.jpg": "/static/media/moorea.f54a93cb71b445de3dc0.jpg",
     "static/media/meridiana.jpg": "/static/media/meridiana.11a7ceab73e388b50a44.jpg",
     "static/media/Quicksand.ttf": "/static/media/Quicksand.109d09e5f7c827d891ab.ttf",
     "static/media/Parisienne.ttf": "/static/media/Parisienne.82a775783a33ce6f911d.ttf",
@@ -274,10 +274,10 @@
     "static/media/pl.svg": "/static/media/pl.763e2468bffb1b7a479c.svg",
     "static/media/jp.svg": "/static/media/jp.09629d053dcc1f13082f.svg",
     "main.82f428e9.css.map": "/static/css/main.82f428e9.css.map",
-    "main.7965b688.js.map": "/static/js/main.7965b688.js.map"
+    "main.39cad9ec.js.map": "/static/js/main.39cad9ec.js.map"
   },
   "entrypoints": [
     "static/css/main.82f428e9.css",
-    "static/js/main.7965b688.js"
+    "static/js/main.39cad9ec.js"
   ]
 }
