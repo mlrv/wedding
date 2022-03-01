@@ -123,7 +123,7 @@ export const Information = (props: { mobileView: boolean }) => {
       </Grid>
       <Grid xs={24}>
         <Text className="font-standard no-vertical-margin" font="18px">
-          18:30 😋
+          20:30 😋
         </Text>
       </Grid>
       <Grid xs={24}>
@@ -155,7 +155,7 @@ export const Information = (props: { mobileView: boolean }) => {
       <Grid xs={24}>
         <Divider width={100} />
       </Grid>
-      <Grid xs={24}>
+      <Grid xs={24} lg={12} xl={6}>
         <Text
           className="font-standard"
           font="18px"
